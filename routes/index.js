@@ -1,19 +1,12 @@
 const router = require('koa-router')()
+const userinfoController = require('../controllers/userinfoController');
 
-router.get('/', async (ctx, next) => {
-  await ctx.render('index', {
-    title: 'Hello Koa 2!'
-  })
-})
+router.post("/login",async(ctx,next)=>{
+    await userinfoController.doLogin(ctx,next);
+});
+router.get('/bar', async(ctx,next) =>{
+    // ctx.body = 'this is a users/bar response'
+    await userinfoController.getUserInfo(ctx,next);
+});
 
-router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string'
-})
-
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json'
-  }
-})
-
-module.exports = router
+module.exports = router;

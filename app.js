@@ -8,7 +8,20 @@ const logger = require('koa-logger')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
+const recipe = require('./routes/recipe')
 
+// const cors = require("koa2-cors");
+//
+// app.use(cors({
+//     origin: function (ctx) {
+//         return '*';
+//     },
+//     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
+//     maxAge: 5,
+//     credentials: true,
+//     allowMethods: ['GET', 'POST', 'DELETE'],
+//     allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
+// }));
 // error handler
 onerror(app)
 
@@ -35,6 +48,8 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(recipe.routes(), recipe.allowedMethods())
+
 
 // error-handling
 app.on('error', (err, ctx) => {
