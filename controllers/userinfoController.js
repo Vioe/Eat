@@ -44,6 +44,14 @@ module.exports = {
     addUser:async (ctx,next) =>{
         try{
             console.log(ctx.request.body)
+            let data = ctx.request.body;
+            if(data.form.radio == 1){
+                data.form.radio = '男'
+            }else{
+                data.form.radio = '女'
+            }
+            let info = await userinfoDAO.addUser(data);
+            ctx.body = {"code": 200, "message": "ok", data: info}
         }catch (e) {
 
         }

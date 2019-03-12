@@ -11,7 +11,11 @@ class DB {
     }
 
     //新增用户
-
+    addUser(data){
+        console.log(1212)
+        console.log(data.form)
+        return DAO("insert into userinfo(userName, sex, phoneNo, password, levelId, expValue, headPhoto, userTime) VALUES(?,?,?,?,?,?,?,?)",[data.form.name,data.form.radio,data.form.inputTel,data.form.password,1,0,"hhh",new Date()])
+    }
 
 
 }
