@@ -8,10 +8,13 @@ class DB {
 
     //获取文章年分
     getArticleYear(){
-        return DAO("select Year(articleTime) from article GROUP BY Year(articleTime) ORDER BY Year(articleTime) DESC",[])
+        return DAO("select Year(articleTime) as year from article GROUP BY Year(articleTime) ORDER BY Year(articleTime) DESC",[])
     }
 
-
+    // 根据年份查询月份
+    getArticleMonth(year){
+        return DAO("select MONTH(articleTime) as month from article where Year(articleTime)=? GROUP BY MONTH(articleTime) ORDER BY MONTH(articleTime) DESC",[year])
+    }
 }
 
 module.exports = new DB();
