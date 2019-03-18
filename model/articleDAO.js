@@ -15,6 +15,11 @@ class DB {
     getArticleMonth(year){
         return DAO("select MONTH(articleTime) as month from article where Year(articleTime)=? GROUP BY MONTH(articleTime) ORDER BY MONTH(articleTime) DESC",[year])
     }
+
+    //根据年份月份查文章
+    getArticleTime(year,month){
+        return DAO("select * from article where Year(articleTime) =? and MONTH(articleTime) = ?",[year,month]);
+    }
 }
 
 module.exports = new DB();

@@ -1,6 +1,7 @@
 const articleDAO = require("../model/articleDAO");
 
 module.exports = {
+    //获取所有文章
     getArticle: async(ctx,next) =>{
         try{
             let data=await articleDAO.getArticle();
@@ -22,6 +23,19 @@ module.exports = {
             ctx.body = {"code": 200, "message": "ok", data: json}
         }catch (e) {
            ctx.body = {"code": 500, "message": "获取文章表失败" + e.message, data: []}
+        }
+    },
+
+    //年月份筛选文章
+    getArticleTime: async (ctx,next) =>{
+        try{
+            let year = ctx.params.year;
+            let month = ctx.params.month;
+            console.log(year,month)
+            let json = await articleDAO.getArticleTime(year,month)
+            ctx.body = {"code": 200 ,"message": "ok",data: json}
+        }catch(e) {
+            ctx.body = {"code": 500, "message": "年月获取失败" + e.message, data: []}
         }
     },
 
