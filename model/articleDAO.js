@@ -20,6 +20,11 @@ class DB {
     getArticleTime(year,month){
         return DAO("select * from article where Year(articleTime) =? and MONTH(articleTime) = ?",[year,month]);
     }
+
+    //获取点赞数最多的前三张文章
+    getThreeArticle(){
+        return DAO("select * from (select * from article ORDER BY articlePraiseNum DESC) form LIMIT 0,3",[]);
+    }
 }
 
 module.exports = new DB();

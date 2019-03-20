@@ -10,6 +10,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 const recipe = require('./routes/recipe')
 const article = require('./routes/article')
+const activity = require('./routes/activity')
 
 // 解决跨域请求
 const cors = require("koa2-cors");
@@ -52,6 +53,7 @@ app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(recipe.routes(), recipe.allowedMethods())
 app.use(article.routes(), article.allowedMethods())
+app.use(activity.routes(), activity.allowedMethods())
 
 
 // error-handling

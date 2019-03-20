@@ -10,4 +10,9 @@ router.get('/', async(ctx, next) =>{
 router.get('/:year/:month',async (ctx,next) =>{
     await articleController.getArticleTime(ctx,next);
 })
+
+router.get('/threeArticle',async (ctx,next) =>{
+    await articleController.getThreeArticle(ctx,next);
+})
+
 module.exports = router

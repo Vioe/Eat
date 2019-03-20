@@ -39,4 +39,14 @@ module.exports = {
         }
     },
 
+    //点赞数最多的前三个文章
+    getThreeArticle: async (ctx,nect) => {
+        try{
+           let json = await articleDAO.getThreeArticle();
+           ctx.body = {"code": 200,"message": "ok",data:json};
+        }catch (e) {
+            ctx.body = {"code": 500, "message": "获取前三篇文章失败" + e.message, data: []}
+        }
+    }
+
 }
