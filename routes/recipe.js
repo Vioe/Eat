@@ -19,6 +19,11 @@ router.get('/hotRecipe',async (ctx,next) =>{
     await recipedetailsController.getHotRecipe(ctx,next)
 })
 
+//添加菜谱
+router.post('/addRecipe', async (ctx,next) => {
+    await recipedetailsController.addRecipe(ctx,next)
+})
+
 
 
 module.exports = router

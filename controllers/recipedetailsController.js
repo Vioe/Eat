@@ -1,4 +1,7 @@
 const recipedetailsDAO = require('../model/recipedetailsDAO')
+const path = require('path')
+const fs = require('fs')
+const formidable = require("formidable");
 
 module.exports={
     // 获取点赞数最多的前八个菜谱
@@ -35,6 +38,42 @@ module.exports={
             ctx.body = {"code": 200,"message":"ok",data:json}
         }catch (e) {
             ctx.body = {"code": 500,"message":"热门菜谱获取失败"+e.message,data:[]}
+        }
+    },
+    //添加菜谱
+    addRecipe: async (ctx,next) => {
+        console.log(222)
+        try{
+            console.log(11)
+            var form = new formidable.IncomingForm();
+            form.uploadDir = '../public/recipeImg'    //设置文件存放路径
+            form.multiples = true;  //设置上传多文件
+            form.keepExtensions = true;
+            console.log(222)
+            form.keepExtensions = true;
+            form.parse(ctx.req,async function (err, fields, files) {
+                console.log("00000")
+                console.log(files)
+                let oldpath=files.filename;
+                console.log("第一张")
+                // console.log(files.filename[0].path)
+                console.log("第二张")
+                // console.log(files.filename[1].path)
+                // console.log("111"+oldpath)
+                // let newpath = '../public/recipeImg/'+fields.fileName;
+                // fs.rename(oldpath, newpath,function(err){
+                //     if(err){
+                //         throw Error("改名失败");
+                //     }
+                //     console.log("改名成功")
+                // });
+                if(err){
+                    ctx.body="上传失败";
+                }
+            })
+            ctx.body = {"code":200, "message": "上传成功",data: []}
+        }catch (e) {
+            ctx.body = {"code":500, "message": "上传失败",data: []}
         }
     }
 };

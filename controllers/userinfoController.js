@@ -70,9 +70,10 @@ module.exports = {
             form.keepExtensions = true;
             form.parse(ctx.req,async function (err, fields, files) {
                 // console.log(files.files.path)
-                console.log(ctx.req)
+                // console.log(ctx.req)
+                console.log(files)
                 let oldpath=files.files.path;
-                console.log("111"+oldpath)
+                // console.log("111"+oldpath)
                 let newpath = '../public/headImg/'+fields.fileName;
                 fs.rename(oldpath, newpath,function(err){
                     if(err){
