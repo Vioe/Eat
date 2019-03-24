@@ -75,5 +75,35 @@ module.exports={
         }catch (e) {
             ctx.body = {"code":500, "message": "上传失败",data: []}
         }
+    },
+    //删除菜谱
+    delRecipe: async (ctx,next) => {
+        // console.log(ctx.params.userId)
+        try{
+            let userId = ctx.params.userId;
+            let detailsId = ctx.params.detailsId;
+            let json = await recipedetailsDAO.delRecipe(detailsId);
+            ctx.body = {"code":200, "message": "删除菜谱成功",data: json}
+        }catch (e) {
+            ctx.body = {"code":500, "message": "删除失败"+e.message,data: []}
+        }
+    },
+    //获取所有菜谱
+    getAllRecipe: async (ctx,next) => {
+        try{
+            let json = await recipedetailsDAO.getAllRecipe();
+            ctx.body = {"code":200, "message": "ok",data: json};
+        }catch (e) {
+            ctx.body = {"code":500, "message": "获取所有菜谱失败"+e.message,data: []};
+        }
+    },
+    //获取发布菜谱最多的前四位用户
+    getFourUser: async (ctx,next) => {
+        try{
+            let json = await recipedetailsDAO.getFourUser()
+            ctx.body = {"code":200, "message": "ok",data: json}
+        }catch (e) {
+            ctx.body = {"code":500, "message": "获取精选作者失败"+e.message,data: []}
+        }
     }
 };

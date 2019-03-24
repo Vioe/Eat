@@ -112,7 +112,17 @@ module.exports = {
             let json = await userinfoDAO.getUser(userId)
             ctx.body = ctx.body = {"code": 200, "message": "ok", data: json}
         }catch (e) {
-
+            ctx.body = ctx.body = {"code": 500, "message": "获取用户信息失败"+e.message, data: json}
+        }
+    },
+    //我的菜谱
+    getMyRecipe: async (ctx,next) => {
+        try{
+            let userId = ctx.params.userId;
+            let json = await userinfoDAO.getMyRecipe(userId);
+            ctx.body = {"code": 200, "message":"ok",data:json}
+        }catch (e) {
+            ctx.body = {"code": 500, "message": "获取我的菜谱失败"+e.message, data: []}
         }
     }
 };

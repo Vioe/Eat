@@ -40,12 +40,25 @@ module.exports = {
     },
 
     //点赞数最多的前三个文章
-    getThreeArticle: async (ctx,nect) => {
+    getThreeArticle: async (ctx,next) => {
         try{
            let json = await articleDAO.getThreeArticle();
            ctx.body = {"code": 200,"message": "ok",data:json};
         }catch (e) {
             ctx.body = {"code": 500, "message": "获取前三篇文章失败" + e.message, data: []}
+        }
+    },
+
+    //根据文章id获取文章详情
+    getArticleDetail: async (ctx,next) => {
+        try{
+            console.log(111)
+            let articleId = ctx.params.articleId;
+            console.log(articleId)
+            let json = await articleDAO.getArticleDetail(articleId);
+            ctx.body = {"code": 200,"message": "ok",data:json}
+        }catch (e) {
+            ctx.body = {"code": 500, "message": "获取一篇文章失败" + e.message, data: []}
         }
     }
 

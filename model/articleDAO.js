@@ -25,6 +25,11 @@ class DB {
     getThreeArticle(){
         return DAO("select * from (select * from article ORDER BY articlePraiseNum DESC) form LIMIT 0,3",[]);
     }
+
+    //根据文章id获取文章详情
+    getArticleDetail(articleId){
+        return DAO("select * from article where articleId = ?",[articleId]);
+    }
 }
 
 module.exports = new DB();

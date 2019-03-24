@@ -19,6 +19,19 @@ class DB {
     getHotRecipe(){
         return DAO("select * from (select * from recipedetails r left join userinfo u on r.userId1 = u.userId ORDER BY recipePraiseNum DESC) form LIMIT 0,4",[]);
     }
+    //删除我的菜谱
+    delRecipe(detailsId){
+        console.log(detailsId)
+        return DAO("call delRecipe(?)",[detailsId]);
+    }
+    //获取所有菜谱
+    getAllRecipe(){
+        return DAO("select * from recipedetails",[]);
+    }
+    //精选作者信息
+    getFourUser(){
+        return DAO("select * from (select * from recipedetails GROUP BY userId1 ORDER BY count(1) DESC) a left join userinfo u on a.userId1 = u.userId LIMIT 0,4",[])
+    }
 }
 
 module.exports = new DB();

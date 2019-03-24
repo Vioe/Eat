@@ -44,8 +44,9 @@ router.post('/updateInfo', async (ctx,next) =>{
 })
 
 //根据用户id获取用户信息
-router.get('/getUser/:userId', async  (ctx,next) =>{
+router.get('/getUser/:userId', async (ctx,next) =>{
     await userinfoController.getUser(ctx, next)
 })
+
 
 module.exports = router

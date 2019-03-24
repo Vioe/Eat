@@ -22,6 +22,10 @@ class DB {
     getUser(userId){
         return DAO('select * from userinfo where userId = ?',[userId]);
     }
+    //我的菜谱
+    getMyRecipe(userId){
+        return DAO('select * from recipedetails where userId1 = ?',userId);
+    }
 
 
 }

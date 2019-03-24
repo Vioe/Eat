@@ -3,8 +3,8 @@ const recipedetailsController = require('../controllers/recipedetailsController'
 
 router.prefix('/recipe')
 
-router.get('/', function (ctx, next) {
-    ctx.body = 'this is a users response!'
+router.get('/', async (ctx, next) =>{
+    await recipedetailsController.getAllRecipe(ctx,next);
 })
 //按点赞数获取前七个菜谱
 router.get('/homeRecipe', async (ctx, next) =>{
@@ -18,10 +18,17 @@ router.get('/recipeDetail/:detailId',async (ctx,next) =>{
 router.get('/hotRecipe',async (ctx,next) =>{
     await recipedetailsController.getHotRecipe(ctx,next)
 })
-
 //添加菜谱
 router.post('/addRecipe', async (ctx,next) => {
     await recipedetailsController.addRecipe(ctx,next)
+})
+//删除我的菜谱
+router.get('/delRecipe/:userId/:detailsId',async (ctx,next) => {
+    await recipedetailsController.delRecipe(ctx,next)
+})
+//精选菜谱
+router.get('/getFourUser', async (ctx,next) =>{
+    await recipedetailsController.getFourUser(ctx,next)
 })
 
 

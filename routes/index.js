@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const formidable = require("formidable");
 const userinfoController = require('../controllers/userinfoController');
+const articleController = require('../controllers/articleController');
 
 router.post("/login",async(ctx,next)=>{
     await userinfoController.doLogin(ctx,next);
@@ -43,6 +44,17 @@ router.post('/updateInfo', async (ctx,next) =>{
    await userinfoController.updateUserInfo(ctx,next)
 })
 
+//我的菜谱
+router.get('/getMyRecipe/:userId',async (ctx,next) => {
+    await userinfoController.getMyRecipe(ctx,next)
+})
+
+//文章详情
+router.get('/getArticleDetail/:articleId',async (ctx,next) =>{
+    console.log(111)
+    console.log(ctx.params.articleId)
+    await articleController.getArticleDetail(ctx,next);
+})
 
 
 module.exports = router;
