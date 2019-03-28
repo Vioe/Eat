@@ -1,5 +1,7 @@
 const router = require('koa-router')()
 const userinfoController = require('../controllers/userinfoController');
+const attentionController = require('../controllers/attentionController');
+const activityController = require('../controllers/activityController');
 
 router.prefix('/users')
 
@@ -46,6 +48,21 @@ router.post('/updateInfo', async (ctx,next) =>{
 //根据用户id获取用户信息
 router.get('/getUser/:userId', async (ctx,next) =>{
     await userinfoController.getUser(ctx, next)
+})
+
+//我关注的用户
+router.get('/attention/:userId',async (ctx,next) => {
+    await attentionController.getAttentionUser(ctx,next);
+})
+
+//删除关注用户
+router.get('/delAttentionUser/:userId/:fansId',async (ctx,next) => {
+    await attentionController.delAttentionUser(ctx,next);
+})
+
+//用户参加的活动
+router.get('/joinActivity/:userId',async (ctx,next) =>{
+    await activityController.joinActivity(ctx,next);
 })
 
 

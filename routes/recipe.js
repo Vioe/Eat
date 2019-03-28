@@ -1,5 +1,6 @@
 const router = require('koa-router')()
 const recipedetailsController = require('../controllers/recipedetailsController');
+const commentController = require('../controllers/commentController');
 
 router.prefix('/recipe')
 
@@ -29,6 +30,18 @@ router.get('/delRecipe/:userId/:detailsId',async (ctx,next) => {
 //精选菜谱
 router.get('/getFourUser', async (ctx,next) =>{
     await recipedetailsController.getFourUser(ctx,next)
+})
+//获取菜谱评论
+router.get('/comment/:recipeId', async (ctx,next) => {
+    await commentController.getRecipeComment(ctx,next)
+})
+//删除作者评论
+router.get('/delComment/:commentId',async (ctx,next) =>{
+    await commentController.delComment(ctx,next)
+})
+//添加评论
+router.post('/addComment', async (ctx,next) =>{
+    await commentController.addComment(ctx,next)
 })
 
 
