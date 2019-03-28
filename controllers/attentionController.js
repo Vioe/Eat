@@ -21,6 +21,17 @@ module.exports={
         }catch (e) {
             ctx.body = {"code":500,"message":"删除用户失败"+e.message,data: []}
         }
+    },
+    //增加一条关注用户
+    addAttentionUser: async (ctx,next) => {
+        try{
+            let userId = ctx.params.userId;
+            let fansId = ctx.params.fansId;
+            await attentionDAO.addAttentionUser(userId,fansId)
+            ctx.body = {"code":200,"message":"添加关注用户成功",data: []}
+        }catch (e) {
+            ctx.body = {"code":500,"message":"添加关注用户失败"+e.message,data: []}
+        }
     }
 
 }

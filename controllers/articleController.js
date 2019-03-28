@@ -60,6 +60,18 @@ module.exports = {
         }catch (e) {
             ctx.body = {"code": 500, "message": "获取一篇文章失败" + e.message, data: []}
         }
+    },
+
+    //文章数点赞
+    addPraiseNum: async (ctx,next) => {
+        try{
+           let articleId = ctx.params.articleId;
+           console.log(articleId)
+           let json = await articleDAO.addPraiseNum(articleId)
+           ctx.body = {"code": 200,"message": "ok",data:json}
+        }catch (e) {
+           ctx.body = {"code": 500, "message": "点赞失败" + e.message, data: []}
+        }
     }
 
 }

@@ -65,5 +65,10 @@ router.get('/joinActivity/:userId',async (ctx,next) =>{
     await activityController.joinActivity(ctx,next);
 })
 
+//我关注用户
+router.get('/myAttention/:userId/:fansId',async (ctx,next) =>{
+    await attentionController.addAttentionUser(ctx,next)
+})
+
 
 module.exports = router

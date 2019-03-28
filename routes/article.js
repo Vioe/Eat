@@ -15,4 +15,7 @@ router.get('/threeArticle',async (ctx,next) =>{
     await articleController.getThreeArticle(ctx,next);
 })
 
+
+
+
 module.exports = router

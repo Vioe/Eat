@@ -9,6 +9,10 @@ class DB {
     delAttentionUser(userId,fansId){
         return DAO("delete from attention where userId = ? and fansId = ?",[userId, fansId]);
     }
+    //增加一条关注用户
+    addAttentionUser(userId,fansId){
+        return DAO("insert into attention(userId,fansId) VALUES(?,?)",[userId,fansId]);
+    }
 }
 
 module.exports = new DB();

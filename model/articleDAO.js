@@ -30,6 +30,11 @@ class DB {
     getArticleDetail(articleId){
         return DAO("select * from article where articleId = ?",[articleId]);
     }
+
+    //文章数点赞
+    addPraiseNum(articleId){
+        return DAO("update article set articlePraiseNum=articlePraiseNum+1 where articleId = ?",[articleId]);
+    }
 }
 
 module.exports = new DB();

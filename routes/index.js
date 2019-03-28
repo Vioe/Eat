@@ -56,5 +56,10 @@ router.get('/getArticleDetail/:articleId',async (ctx,next) =>{
     await articleController.getArticleDetail(ctx,next);
 })
 
+//文章点赞数加1
+router.get('/addPriseNum/:articleId',async (ctx,next) =>{
+    console.log(1111)
+    await articleController.addPraiseNum(ctx,next)
+})
 
 module.exports = router;
