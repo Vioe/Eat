@@ -45,5 +45,4 @@ module.exports={
             ctx.body = {"code":500,"message":"查看关注用户失败"+e.message,data: []}
         }
     }
-
 }

@@ -18,5 +18,14 @@ module.exports={
         }catch (e) {
             ctx.body = {"code": 500,"message":"获取用户参与活动失败"+e.message,data:[]}
         }
+    },
+    getActivityDetail: async (ctx,next) =>{
+        try{
+           let activityId = ctx.params.activityId;
+           let json = await activitydetailsDAO.getActivityDetail(activityId);
+            ctx.body = {"code": 200,"message":"ok",data:json};
+        }catch (e) {
+            ctx.body = {"code": 500,"message":"活动详情获取失败"+e.message,data:[]}
+        }
     }
 };
