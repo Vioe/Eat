@@ -43,6 +43,10 @@ router.get('/delComment/:commentId',async (ctx,next) =>{
 router.post('/addComment', async (ctx,next) =>{
     await commentController.addComment(ctx,next)
 })
+//添加基础菜谱信息
+router.post('/addBaseRecipe',async (ctx,next) =>{
+    await recipedetailsController.addBaseRecipe(ctx,next)
+})
 
 
 

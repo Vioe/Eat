@@ -87,7 +87,8 @@ module.exports = {
                     let data = {
                         userName: mydata.formLabelAlign.name,
                         password: mydata.formLabelAlign.password1,
-                        picName: fields.fileName,
+                        // picName: fields.fileName,
+                        picName: 'http://localhost:3000/headImg/'+fields.fileName,
                         userId: mydata.userId
                     }
                     let json =await userinfoDAO.updateUserInfo(data);

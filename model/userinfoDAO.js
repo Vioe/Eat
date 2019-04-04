@@ -24,7 +24,7 @@ class DB {
     }
     //我的菜谱
     getMyRecipe(userId){
-        return DAO('select * from recipedetails where userId1 = ?',userId);
+        return DAO('select * from recipedetails where userId1 = ? ORDER BY detailsId DESC',userId);
     }
 
 

@@ -69,6 +69,10 @@ router.get('/joinActivity/:userId',async (ctx,next) =>{
 router.get('/myAttention/:userId/:fansId',async (ctx,next) =>{
     await attentionController.addAttentionUser(ctx,next)
 })
+//用户是否有关注该用户
+router.get('/isAttUser/:userId/:fansId',async (ctx,next) => {
+    await attentionController.isAttUser(ctx,next)
+})
 
 
 module.exports = router

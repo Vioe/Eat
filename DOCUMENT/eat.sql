@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 25/03/2019 03:02:35
+ Date: 04/04/2019 16:07:56
 */
 
 SET NAMES utf8mb4;
@@ -1071,27 +1071,27 @@ CREATE TABLE `activityresult`  (
   PRIMARY KEY (`partInActId`) USING BTREE,
   INDEX `fk_partInAct_activityDetails1_idx`(`activityDetailsId`) USING BTREE,
   CONSTRAINT `fk_partInAct_activityDetails1` FOREIGN KEY (`activityDetailsId`) REFERENCES `activitydetails` (`activityid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '参赛表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '参赛表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of activityresult
 -- ----------------------------
 INSERT INTO `activityresult` VALUES (1, 27, 27, 2);
 INSERT INTO `activityresult` VALUES (2, 23, 23, 2);
-INSERT INTO `activityresult` VALUES (3, 28, 28, 2);
+INSERT INTO `activityresult` VALUES (3, 658, 28, 2);
 INSERT INTO `activityresult` VALUES (4, 29, 29, 2);
 INSERT INTO `activityresult` VALUES (5, 24, 24, 2);
 INSERT INTO `activityresult` VALUES (6, 24, 24, 2);
 INSERT INTO `activityresult` VALUES (7, 15, 15, 2);
 INSERT INTO `activityresult` VALUES (8, 18, 78, 4);
 INSERT INTO `activityresult` VALUES (9, 21, 81, 4);
-INSERT INTO `activityresult` VALUES (10, 3, 63, 4);
+INSERT INTO `activityresult` VALUES (10, 658, 63, 4);
 INSERT INTO `activityresult` VALUES (11, 11, 70, 4);
 INSERT INTO `activityresult` VALUES (12, 18, 78, 4);
 INSERT INTO `activityresult` VALUES (13, 19, 79, 4);
 INSERT INTO `activityresult` VALUES (14, 23, 113, 5);
 INSERT INTO `activityresult` VALUES (15, 16, 106, 5);
-INSERT INTO `activityresult` VALUES (16, 12, 102, 5);
+INSERT INTO `activityresult` VALUES (16, 658, 102, 5);
 INSERT INTO `activityresult` VALUES (17, 28, 118, 5);
 INSERT INTO `activityresult` VALUES (18, 21, 111, 5);
 INSERT INTO `activityresult` VALUES (19, 24, 114, 5);
@@ -1121,9 +1121,9 @@ CREATE TABLE `article`  (
 -- ----------------------------
 -- Records of article
 -- ----------------------------
-INSERT INTO `article` VALUES (16, '65℃以上热饮成高危致癌物', '2018-07-01', '原标题：65℃以上热饮成高危致癌物 警惕5类食物//近日，世界卫生组织(WHO)下属的国际癌症研究机构发布了最新报告：警告饮用65℃以上的热饮，可能增加罹患食道癌的风险。其实，在众多的致癌因素中，食物往往是大家比较关注的，也是大家容易忽略的。//世界卫生组织：非常热的饮料被列入2A致癌物//这项最新的评估报告发表在15日出版的《柳叶刀肿瘤学》杂志上。报告指出，在中国、土耳其及南美洲国家的研究发现，这些地区的人们通常习惯饮用65℃或70℃以上的水、咖啡或茶，罹患食管癌的风险也随之提升。//报告称，23名由IARC组织的国际工作小组成员发现饮用非常热的饮料很有可能导致人们罹患食道癌。而这里的“非常热”是指超过65℃的任何饮料。//在此次世卫组织的评估中，非常热的饮料被列入了2A级(很可能致癌)，与之被列入同一类的有高温油炸食品和高温油烟等。而去年备受争议的红肉也属于这一归类中。//科普：致癌物分4个等级//致癌物是指能诱发人患癌的“坏物质”，它的范畴包括任何能增加人类患癌风险的化学、物理物质及生活、工作方式等。//1965年，国际癌症研究机构(IARC)开始了确定致癌物的工作，并于每年发布更新致癌因素的信息，最终，将致癌物分为了4个等级，其中不少与食物相关。//1级//烟草、酒精饮料、黄曲霉素、槟榔、中式咸鱼等明确有致癌作用的致癌物。黄曲霉素主要存在于霉变的坚果、大米和玉米等，吃这些食物时一定要注意清洗和储存得当。//2级//丙烯酰胺、铅、4-甲基咪唑等可能性较高的致癌物质。生活中如果经常采用高温油炸、高温油烟烹制食物，接触到丙烯酰胺的机会就比较大，应尽量避免。//3级//苏丹红色素、胆固醇、咖啡因、三聚氰胺、糖精等尚不能分类的致癌物。这类物质动物和人群研究的致癌证据都不充分。//4级//致癌物中还有第4级，指相关研究中没有充足证据证明其具有致癌性的物质，食物中属于此类的物质较少。//5种常见的致癌食物//1、咸鱼//咸鱼产生二甲基亚硝酸盐，在体内可以转化为致癌物质二甲基亚硝酸胺。一个人如果从出生到10岁经常食用咸鱼，将来患鼻咽癌的可能性比不食用咸鱼的人大30-40倍。鱼露、虾酱、咸蛋、咸菜、腊肠、火腿、熏猪肉同样含有较多的亚硝酸胺类致癌物质，应尽量少吃。//2、烧烤食物//烤牛肉、烤鸭、烤羊肉、烤鹅、烧猪肉等。因含有强致癌物3，4-苯并芘，不宜多食。//3、熏制食品//如熏肉、熏肝、熏鱼、熏蛋、熏豆腐干等亦含苯并芘致癌物，常食易患食道癌和胃癌。//4、油炸食品//煎炸过焦后，产生致癌物质多环芳烃。咖啡豆烧焦后，苯并芘含量增加20倍。油煎饼、臭豆腐、煎炸芋角、油条等，多数是使用重复多次的油，高温下会产生一种致癌分解物。//5、霉变食物//米、麦、豆、玉米、花生等食品易受潮霉变，被霉菌污染后会产生各种致癌毒素。//来源：家庭医生在线//', 'http://images.meishij.net/p/20161031/7a77f2c2eb0a71a478a48a92dc8c9d97.jpg', 'http://images.meishij.net/p/20161024/61a6352d44ed9c05b633279dc4f6363a_150x150.jpg', 1, 1, NULL, 1);
-INSERT INTO `article` VALUES (17, '腐竹能燃烧，还能吃吗?', '2018-06-01', '最近微信上传的一个“腐竹燃烧”视频引起了不少关注，视频里有人点燃了一根腐竹，燃烧后有沥青一样的东西滴下，被认为是含胶的有毒腐竹。人们不禁要问，腐竹能燃烧，是真的吗?能燃烧的腐竹能吃吗?腐竹属于大豆制品，是豆浆煮沸后经一段时间保温，表面形成一层薄膜，挑出后下垂成枝条状，再经干燥而成。这个过程听着是不是很耳熟?没错，跟奶皮子的制作方法如出一辙。奶皮子在内蒙等地非常流行，以鲜奶熬煮，等其表面凝结一层膜后，用筷子挑起挂在通风处晾干。//干腐竹色泽黄白，油光透亮，用清水浸泡3-5小时发开以后，既可炒，也可拌，还是吃火锅的好食材，跟肉类和蔬菜都可搭配，营养又美味，深受人们喜爱。//腐竹燃烧是奇闻?//燃烧是一种化学反应，是可燃物与空气中的氧气之间发生的快速放热和发光的氧化反应。能燃烧的物质就称为可燃物，大多是含有碳和氢的化合物。一般我们容易想到的可燃物是煤、石油、天然气、木头、酒精、布料等，而很少有人会将食物和燃烧联系在一起。但事实上，很多食品的主要成分也是含有碳和氢的化合物，完全符合可燃物的定义。蛋白质、脂肪和碳水化合物都是食物中可以燃烧的成分。油脂可燃很多人都知道，蛋白质的燃烧在生活中也很常见，比如头发、羊毛等物质燃烧时，主要就是蛋白质的燃烧。//干腐竹含水量很少，只有8%左右，主要成分是蛋白质，约占45%，其次是脂类和碳水化合物，各占22%左右。这样看来，腐竹中含的基本都是可燃成分，又很干燥，能燃烧是自然的，无需大惊小怪!//其实，前段时间还出现过面条燃烧、饼干燃烧的类似新闻，也引起了人们一定程度对面条、饼干的担心。之所以“燃烧事件”频出，一是因为大家对食品安全问题尤其关注，二是人们很难把食物跟燃烧联系在一起。现在大家应该明白了，很多食物都是可以燃烧的，是食物的固有属性，而并不是添加了什么有毒物质。明确了这一点，以后再看到网上出现什么别的食物燃烧的视频，就大可淡然处之了。//豆制品中的“营养冠军”//腐竹浓缩了豆浆中的蛋白质和脂类，营养价值较高，被誉为豆制品中的“营养冠军”。腐竹中近一半成分是大豆蛋白，并且不含胆固醇，是素食者以及患有慢性病的中老年人获取优质蛋白质的良好途径。与谷类搭配食用，还可以补充谷类所缺乏的赖氨酸，提高蛋白质利用率。//腐竹中含有22%左右的脂类，主要是不饱和脂肪酸，特别是亚油酸含量很高。亚油酸是人体必需脂肪酸，能与血液中的胆固醇结合，促进胆固醇的转运和代谢，预防动脉粥样硬化。腐竹还富含具有血管清道夫功能的大豆卵磷脂，同样能降低胆固醇、软化血管、预防心脑血管疾病，还具有健脑作用。(马冠生)//来源：新华网//', 'http://images.meishij.net/p/20161116/e1a14a1e26c092e39a659adacd48158c.jpg', 'http://images.meishij.net/p/20161021/530ec62735b3ab85fdd87fc5483527f7_150x150.jpg', 0, 1, NULL, 1);
-INSERT INTO `article` VALUES (18, '不吃主食，真会更健康吗？', '2018-08-01', '最近有一本叫做《谷物大脑》的书风靡世界图书市场，引起了很多读者的注意。它之所以如此火爆，主要是因为其中提出了颠覆性的理念——吃小麦有害健康，吃主食无益，高碳水化合物的饮食不仅让人肥胖，还会让大脑提前衰老，以鱼肉+蔬菜的低碳水化合物饮食才是正确的，而且完全不需要恐惧饱和脂肪。这样的说法，和人们以往三十年当中听到的健康饮食建议，实在是差距太大了。//如果说它是谣言，这明明是一位多年研究大脑和神经系统疾病的著名医学专家写的;如果说是医生不懂营养，书中明明列举了大量的研究证据，不由得读者不相信。//有位朋友迷茫地问：难道说，我吃了一辈子的面食，是让我衰老的原因?我不吃它们，脑子就会好用些?//另一位朋友问：不吃主食，到底吃什么啊?天天大鱼大肉当饭，不吃一点主食，别说健康不健康，首先我就吃不下去，也吃不起啊!//说实话，这本书里的内容，并未让我感觉非常惊讶。因为相关的研究证据我也看了很多，而且非常赞成其中的某些说法——不要吃那么多的面食，甜食更不要吃，长期的高血糖反应是有害的。//目前有足够多的研究能让人确信，餐后血糖过高是一个加速大脑衰老的因素。我们所吃的日常主食，无论是白米饭、白馒头、白面包，还是奶黄包、包子、花卷、枣糕、玉米糕、发面饼、白米粥、米糕等，哪个都是高血糖反应的食物。研究发现，餐后血糖控制能力较差的人，在认知能力测试方面得分较低;胖人和体重正常的人相比，大脑工作能力也会提前下降。除了促进大脑衰老之外，高血糖反应的饮食也会增加罹患肥胖、糖尿病、心脑血管疾病以及部分癌症的风险。//小麦中的面筋蛋白(gluten，常被翻译为“麸质”)，是一个食物慢性过敏的常见诱因。欧洲有不少人对面筋蛋白慢性过敏，不仅可能导致肥胖，还可能导致大脑空白、思维混乱之类大脑神经系统的功能障碍。不仅白馒头白面包中含有它，全麦面包中也有它们，那些低血糖反应的通心粉、意大利面中含量也很高。所以，如果测出有小麦面筋蛋白慢性过敏，就应当远离所有的含面粉食物，连炸大虾外面裹的那层面粉最好也避免。//如果像作者所提倡的那样，不吃各种主食，以鱼肉和蔬菜为食，那么人的确会出现快速的体重下降，这一点令很多人感觉神奇，其实也不过是一个生物化学常识——因为这样做会让脂肪无法充分分解，产生含有能量的“酮体”，使血液酸化，身体必须尽快把它排出去。但排出酮体，意味着身体会浪费大量的能量，所以脂肪分解的速度远远超过正常“管住嘴、迈开腿”时脂肪分解的速度。同时，因为基本上不吃含淀粉和糖的食物，所以餐后的血糖上升幅度微乎其微。在短时间之内，这样的吃法会变瘦，血糖会降低，血脂也不会升高。//不过，先别着急欢呼。不吃主食的饮食方式，从上世纪六七十年代以来，更换包装之后已经数度流行，但每次都从火爆转为式微，这次我相信也不会例外。因为，世界上没有那么完美的饮食健康解决方案。这里不说复杂的科学研究，只说人们都很容易理解的常识。如果一辈子不吃粮食、薯类和杂豆，以鱼肉蛋和蔬菜为主食，能够解决以下这些问题吗?//1 以鱼肉为主食，饮食安全堪忧//很多西方人笃信“石器时代饮食”，说远古人类以肉为主食，吃肉才是人类基因所适合的生活。但是，以鱼肉类为主食，和吃谷物豆类蔬果相比，更易招来环境污染。根据生物放大定律，每升高一个营养级，难分解环境污染物(比如各种重金属、二噁英、多氯联苯、六六六等)的浓度就会上升至少10倍。现在不是远古那种没有化学污染的环境条件了。每天吃一两肉污染风险较小，但每天吃一斤肉的污染风险就大10倍。//有人说，我可以选择有机食物和野生深海鱼类。但是，你能保证自己一辈子吃的鱼肉蛋类全是有机的吗?即便深海鱼类，其中也会含有汞污染，大量当饭吃并不是明智之举。//2 吃肉为主食，会增加肠癌等多种癌症的风险，也会增加心脑血管疾病的危险。//正如人们所记得的那样，世界卫生组织(WHO)在去年已经把红肉和肉类加工品(香肠火腿培根咸肉等)列为一类致癌物，因为过多的红肉会增加肠癌的风险。还有很多研究表明，过多的红肉(每天平均100克以上)和红肉加工品(每天25克以上)可能会增加高血压、冠心病、乳腺癌、前列腺癌等疾病的危险。中国居民膳食指南中推荐的每天40-75克的红肉是不会带来这种危险的。//虽然提倡低碳水化合物饮食的人都会强调多吃蔬菜，但实际上如果没有谷类、豆类和薯类，仅仅靠蔬菜来供应多种膳食纤维，很难达到每日25-35克的推荐范围。为了躲开一种病，升高自己其他一些疾病的危险，值得吗?//3 以鱼肉类和蔬菜为主食，对胃肠功能要求较高，部分人容易出现营养不良。//在中国这样从小以淀粉类食物为主食的人群当中，并非每个人都能承受大量吃鱼肉这样的消化负担。和淀粉类主食相比，鱼肉类食物饱腹感较高，消化速度较慢。在不吃主食之后，很多人无法消化过多的鱼肉类，实际摄入的能量大幅度减少，出现饥饿节食和蛋白质营养不良的状态。因为采纳不吃主食减肥法而发生月经不调、掉头发、皮肤松弛的女性屡见不鲜，尽管她们都声称自己每天吃很多鱼肉蛋和蔬菜。不吃主食之后，因为低血糖和B族维生素不足而造成心情恶劣、情绪沮丧、脾气暴躁的减肥女性也相当多见。//4 长期不吃含淀粉食物的饮食方法，难以长期持续，停下立刻反弹。//在西方减肥研究当中，低脂肪方法的依从性较好，而低碳水化合物减肥方法则常常存在退出率较高的情况，也就是说，受试者不太愿意长期坚持。对于我国这样一个从小习惯于以碳水化合物食物为主食的国家，这种情况更为明显。人们宁愿接受少油的烹调方法，也不愿意接受一辈子不吃主食的生活。两三个月固然能够暂时忍受，但如果成年累月不吃淀粉类食物，人们会感觉不幸福。没有幸福感的事情，多数人是很难长期持续的。//所以，吃肉为主食，虽然短期因为酮症而快速减重，但除非你一辈子坚持这种吃法，否则只要开始恢复淀粉类主食，体重马上就会反弹——此前的成果化为乌有，而体重忽高忽低的波动非常有害健康，折腾自己有什么意义呢?//证明低碳水化合物减肥法好处的研究都是3-6个月的短期研究。国外有一年以上甚至两年以上的长期研究证明，从长期来说，不吃主食的减肥法并不优于吃主食而减脂肪的减肥法。如果不吃主食的减肥法真的那么成功，而且能够长期维持，怎么能解释欧美经历多次低碳水化合物减肥法的热潮之后，至今仍然肥胖率居高不下的事实呢?//5 低碳水化合物的饮食，肝肾的工作负担加重，并非人人适合。//低碳水化合物饮食中，主要能源从碳水化合物切换为蛋白质和脂肪，蛋白质代谢加强，产生的尿素增加，给肝脏和肾脏带来负担;脂肪不能彻底分解，而是产生酮酸，需要及时排除，更会增加肾脏的负担。一些代谢能力较弱的人采用这种膳食后会感觉身体疲劳，脸色和皮肤变差，记忆力下降。肝肾功能不全的人更不能采用这种吃法。//6 吃肉为主食，以中国的资源环境条件，是不可承受的。//最要紧的是，相比于以谷物为主食，以鱼肉为主食会大大增加资源消耗。在我国这样一个人口密集而农业资源不足，20%食物需要依赖进口的国家里，一部分人以鱼肉为主食，那么另一部分人只能饿死，所以这种饮食方式永远只能是少数人，在我国不具备广泛推广的可能性。//7 没有研究确认，低碳水化合物饮食比吃主食的低血糖反应饮食更能延长寿命。//很多西方的书上推崇石器时代饮食，但是别忘记一个事实，那就是古人的平均寿命都非常短，他们的吃法并不能预测老年后的情况。现代人的预期寿命已经长达70多岁甚至80岁以上，学习古人的吃法未必会有长寿效果。虽然有一些动物实验证明降低糖的供应可以延长寿命，也有研究证明降低餐后血糖反应有多种好处，但并没有证据显示，低碳水化合物饮食比正常吃主食，但选择低血糖反应食材的饮食更能促进长寿。//那么，饮食、健康和生态的综合解决方案是什么呢?很多研究已经提示了答案。//仍然吃主食，仍然摄入正常量的碳水化合物(每天从主食中摄入淀粉+果蔬中天然糖的总量约200-300克，减肥时最低不低于120克)，但更多地选择慢消化、高膳食纤维、低血糖反应的主食，比如燕麦、荞麦、黑米、红小豆、芸豆、干豌豆等各种杂粮，再配合大量的蔬菜和少量的鱼肉蛋奶，就是一个好答案。这种饮食结构，既能避免吃大米白面过度升高血糖的麻烦，可以避免过多摄入面筋蛋白的问题，又能减轻肝脏和肾脏的负担，大量研究证明，这种吃法也有利于降低肥胖、糖尿病、老年认知退化、心脑血管疾病和多种癌症的危险。而这正是中国居民膳食指南中所推荐的饮食方式。它符合国情，容易操作，不会引入更多的环境污染，而且能够长期持续而无损健康。（范志红）//来源：新华网//', 'http://images.meishij.net/p/20161018/f3d0ac75c61076303cd58b948332aeb0.jpg', 'http://images.meishij.net/p/20161019/042af4eea9ae9cf83daa8e5363fb3f98_150x150.jpg', 0, 1, NULL, 1);
+INSERT INTO `article` VALUES (16, '65℃以上热饮成高危致癌物', '2018-07-01', '原标题：65℃以上热饮成高危致癌物 警惕5类食物//近日，世界卫生组织(WHO)下属的国际癌症研究机构发布了最新报告：警告饮用65℃以上的热饮，可能增加罹患食道癌的风险。其实，在众多的致癌因素中，食物往往是大家比较关注的，也是大家容易忽略的。//世界卫生组织：非常热的饮料被列入2A致癌物//这项最新的评估报告发表在15日出版的《柳叶刀肿瘤学》杂志上。报告指出，在中国、土耳其及南美洲国家的研究发现，这些地区的人们通常习惯饮用65℃或70℃以上的水、咖啡或茶，罹患食管癌的风险也随之提升。//报告称，23名由IARC组织的国际工作小组成员发现饮用非常热的饮料很有可能导致人们罹患食道癌。而这里的“非常热”是指超过65℃的任何饮料。//在此次世卫组织的评估中，非常热的饮料被列入了2A级(很可能致癌)，与之被列入同一类的有高温油炸食品和高温油烟等。而去年备受争议的红肉也属于这一归类中。//科普：致癌物分4个等级//致癌物是指能诱发人患癌的“坏物质”，它的范畴包括任何能增加人类患癌风险的化学、物理物质及生活、工作方式等。//1965年，国际癌症研究机构(IARC)开始了确定致癌物的工作，并于每年发布更新致癌因素的信息，最终，将致癌物分为了4个等级，其中不少与食物相关。//1级//烟草、酒精饮料、黄曲霉素、槟榔、中式咸鱼等明确有致癌作用的致癌物。黄曲霉素主要存在于霉变的坚果、大米和玉米等，吃这些食物时一定要注意清洗和储存得当。//2级//丙烯酰胺、铅、4-甲基咪唑等可能性较高的致癌物质。生活中如果经常采用高温油炸、高温油烟烹制食物，接触到丙烯酰胺的机会就比较大，应尽量避免。//3级//苏丹红色素、胆固醇、咖啡因、三聚氰胺、糖精等尚不能分类的致癌物。这类物质动物和人群研究的致癌证据都不充分。//4级//致癌物中还有第4级，指相关研究中没有充足证据证明其具有致癌性的物质，食物中属于此类的物质较少。//5种常见的致癌食物//1、咸鱼//咸鱼产生二甲基亚硝酸盐，在体内可以转化为致癌物质二甲基亚硝酸胺。一个人如果从出生到10岁经常食用咸鱼，将来患鼻咽癌的可能性比不食用咸鱼的人大30-40倍。鱼露、虾酱、咸蛋、咸菜、腊肠、火腿、熏猪肉同样含有较多的亚硝酸胺类致癌物质，应尽量少吃。//2、烧烤食物//烤牛肉、烤鸭、烤羊肉、烤鹅、烧猪肉等。因含有强致癌物3，4-苯并芘，不宜多食。//3、熏制食品//如熏肉、熏肝、熏鱼、熏蛋、熏豆腐干等亦含苯并芘致癌物，常食易患食道癌和胃癌。//4、油炸食品//煎炸过焦后，产生致癌物质多环芳烃。咖啡豆烧焦后，苯并芘含量增加20倍。油煎饼、臭豆腐、煎炸芋角、油条等，多数是使用重复多次的油，高温下会产生一种致癌分解物。//5、霉变食物//米、麦、豆、玉米、花生等食品易受潮霉变，被霉菌污染后会产生各种致癌毒素。//来源：家庭医生在线//', 'http://images.meishij.net/p/20161031/7a77f2c2eb0a71a478a48a92dc8c9d97.jpg', 'http://images.meishij.net/p/20161024/61a6352d44ed9c05b633279dc4f6363a_150x150.jpg', 12, 1, NULL, 1);
+INSERT INTO `article` VALUES (17, '腐竹能燃烧，还能吃吗?', '2018-06-01', '最近微信上传的一个“腐竹燃烧”视频引起了不少关注，视频里有人点燃了一根腐竹，燃烧后有沥青一样的东西滴下，被认为是含胶的有毒腐竹。人们不禁要问，腐竹能燃烧，是真的吗?能燃烧的腐竹能吃吗?腐竹属于大豆制品，是豆浆煮沸后经一段时间保温，表面形成一层薄膜，挑出后下垂成枝条状，再经干燥而成。这个过程听着是不是很耳熟?没错，跟奶皮子的制作方法如出一辙。奶皮子在内蒙等地非常流行，以鲜奶熬煮，等其表面凝结一层膜后，用筷子挑起挂在通风处晾干。//干腐竹色泽黄白，油光透亮，用清水浸泡3-5小时发开以后，既可炒，也可拌，还是吃火锅的好食材，跟肉类和蔬菜都可搭配，营养又美味，深受人们喜爱。//腐竹燃烧是奇闻?//燃烧是一种化学反应，是可燃物与空气中的氧气之间发生的快速放热和发光的氧化反应。能燃烧的物质就称为可燃物，大多是含有碳和氢的化合物。一般我们容易想到的可燃物是煤、石油、天然气、木头、酒精、布料等，而很少有人会将食物和燃烧联系在一起。但事实上，很多食品的主要成分也是含有碳和氢的化合物，完全符合可燃物的定义。蛋白质、脂肪和碳水化合物都是食物中可以燃烧的成分。油脂可燃很多人都知道，蛋白质的燃烧在生活中也很常见，比如头发、羊毛等物质燃烧时，主要就是蛋白质的燃烧。//干腐竹含水量很少，只有8%左右，主要成分是蛋白质，约占45%，其次是脂类和碳水化合物，各占22%左右。这样看来，腐竹中含的基本都是可燃成分，又很干燥，能燃烧是自然的，无需大惊小怪!//其实，前段时间还出现过面条燃烧、饼干燃烧的类似新闻，也引起了人们一定程度对面条、饼干的担心。之所以“燃烧事件”频出，一是因为大家对食品安全问题尤其关注，二是人们很难把食物跟燃烧联系在一起。现在大家应该明白了，很多食物都是可以燃烧的，是食物的固有属性，而并不是添加了什么有毒物质。明确了这一点，以后再看到网上出现什么别的食物燃烧的视频，就大可淡然处之了。//豆制品中的“营养冠军”//腐竹浓缩了豆浆中的蛋白质和脂类，营养价值较高，被誉为豆制品中的“营养冠军”。腐竹中近一半成分是大豆蛋白，并且不含胆固醇，是素食者以及患有慢性病的中老年人获取优质蛋白质的良好途径。与谷类搭配食用，还可以补充谷类所缺乏的赖氨酸，提高蛋白质利用率。//腐竹中含有22%左右的脂类，主要是不饱和脂肪酸，特别是亚油酸含量很高。亚油酸是人体必需脂肪酸，能与血液中的胆固醇结合，促进胆固醇的转运和代谢，预防动脉粥样硬化。腐竹还富含具有血管清道夫功能的大豆卵磷脂，同样能降低胆固醇、软化血管、预防心脑血管疾病，还具有健脑作用。(马冠生)//来源：新华网//', 'http://images.meishij.net/p/20161116/e1a14a1e26c092e39a659adacd48158c.jpg', 'http://images.meishij.net/p/20161021/530ec62735b3ab85fdd87fc5483527f7_150x150.jpg', 6, 1, NULL, 1);
+INSERT INTO `article` VALUES (18, '不吃主食，真会更健康吗？', '2018-08-01', '最近有一本叫做《谷物大脑》的书风靡世界图书市场，引起了很多读者的注意。它之所以如此火爆，主要是因为其中提出了颠覆性的理念——吃小麦有害健康，吃主食无益，高碳水化合物的饮食不仅让人肥胖，还会让大脑提前衰老，以鱼肉+蔬菜的低碳水化合物饮食才是正确的，而且完全不需要恐惧饱和脂肪。这样的说法，和人们以往三十年当中听到的健康饮食建议，实在是差距太大了。//如果说它是谣言，这明明是一位多年研究大脑和神经系统疾病的著名医学专家写的;如果说是医生不懂营养，书中明明列举了大量的研究证据，不由得读者不相信。//有位朋友迷茫地问：难道说，我吃了一辈子的面食，是让我衰老的原因?我不吃它们，脑子就会好用些?//另一位朋友问：不吃主食，到底吃什么啊?天天大鱼大肉当饭，不吃一点主食，别说健康不健康，首先我就吃不下去，也吃不起啊!//说实话，这本书里的内容，并未让我感觉非常惊讶。因为相关的研究证据我也看了很多，而且非常赞成其中的某些说法——不要吃那么多的面食，甜食更不要吃，长期的高血糖反应是有害的。//目前有足够多的研究能让人确信，餐后血糖过高是一个加速大脑衰老的因素。我们所吃的日常主食，无论是白米饭、白馒头、白面包，还是奶黄包、包子、花卷、枣糕、玉米糕、发面饼、白米粥、米糕等，哪个都是高血糖反应的食物。研究发现，餐后血糖控制能力较差的人，在认知能力测试方面得分较低;胖人和体重正常的人相比，大脑工作能力也会提前下降。除了促进大脑衰老之外，高血糖反应的饮食也会增加罹患肥胖、糖尿病、心脑血管疾病以及部分癌症的风险。//小麦中的面筋蛋白(gluten，常被翻译为“麸质”)，是一个食物慢性过敏的常见诱因。欧洲有不少人对面筋蛋白慢性过敏，不仅可能导致肥胖，还可能导致大脑空白、思维混乱之类大脑神经系统的功能障碍。不仅白馒头白面包中含有它，全麦面包中也有它们，那些低血糖反应的通心粉、意大利面中含量也很高。所以，如果测出有小麦面筋蛋白慢性过敏，就应当远离所有的含面粉食物，连炸大虾外面裹的那层面粉最好也避免。//如果像作者所提倡的那样，不吃各种主食，以鱼肉和蔬菜为食，那么人的确会出现快速的体重下降，这一点令很多人感觉神奇，其实也不过是一个生物化学常识——因为这样做会让脂肪无法充分分解，产生含有能量的“酮体”，使血液酸化，身体必须尽快把它排出去。但排出酮体，意味着身体会浪费大量的能量，所以脂肪分解的速度远远超过正常“管住嘴、迈开腿”时脂肪分解的速度。同时，因为基本上不吃含淀粉和糖的食物，所以餐后的血糖上升幅度微乎其微。在短时间之内，这样的吃法会变瘦，血糖会降低，血脂也不会升高。//不过，先别着急欢呼。不吃主食的饮食方式，从上世纪六七十年代以来，更换包装之后已经数度流行，但每次都从火爆转为式微，这次我相信也不会例外。因为，世界上没有那么完美的饮食健康解决方案。这里不说复杂的科学研究，只说人们都很容易理解的常识。如果一辈子不吃粮食、薯类和杂豆，以鱼肉蛋和蔬菜为主食，能够解决以下这些问题吗?//1 以鱼肉为主食，饮食安全堪忧//很多西方人笃信“石器时代饮食”，说远古人类以肉为主食，吃肉才是人类基因所适合的生活。但是，以鱼肉类为主食，和吃谷物豆类蔬果相比，更易招来环境污染。根据生物放大定律，每升高一个营养级，难分解环境污染物(比如各种重金属、二噁英、多氯联苯、六六六等)的浓度就会上升至少10倍。现在不是远古那种没有化学污染的环境条件了。每天吃一两肉污染风险较小，但每天吃一斤肉的污染风险就大10倍。//有人说，我可以选择有机食物和野生深海鱼类。但是，你能保证自己一辈子吃的鱼肉蛋类全是有机的吗?即便深海鱼类，其中也会含有汞污染，大量当饭吃并不是明智之举。//2 吃肉为主食，会增加肠癌等多种癌症的风险，也会增加心脑血管疾病的危险。//正如人们所记得的那样，世界卫生组织(WHO)在去年已经把红肉和肉类加工品(香肠火腿培根咸肉等)列为一类致癌物，因为过多的红肉会增加肠癌的风险。还有很多研究表明，过多的红肉(每天平均100克以上)和红肉加工品(每天25克以上)可能会增加高血压、冠心病、乳腺癌、前列腺癌等疾病的危险。中国居民膳食指南中推荐的每天40-75克的红肉是不会带来这种危险的。//虽然提倡低碳水化合物饮食的人都会强调多吃蔬菜，但实际上如果没有谷类、豆类和薯类，仅仅靠蔬菜来供应多种膳食纤维，很难达到每日25-35克的推荐范围。为了躲开一种病，升高自己其他一些疾病的危险，值得吗?//3 以鱼肉类和蔬菜为主食，对胃肠功能要求较高，部分人容易出现营养不良。//在中国这样从小以淀粉类食物为主食的人群当中，并非每个人都能承受大量吃鱼肉这样的消化负担。和淀粉类主食相比，鱼肉类食物饱腹感较高，消化速度较慢。在不吃主食之后，很多人无法消化过多的鱼肉类，实际摄入的能量大幅度减少，出现饥饿节食和蛋白质营养不良的状态。因为采纳不吃主食减肥法而发生月经不调、掉头发、皮肤松弛的女性屡见不鲜，尽管她们都声称自己每天吃很多鱼肉蛋和蔬菜。不吃主食之后，因为低血糖和B族维生素不足而造成心情恶劣、情绪沮丧、脾气暴躁的减肥女性也相当多见。//4 长期不吃含淀粉食物的饮食方法，难以长期持续，停下立刻反弹。//在西方减肥研究当中，低脂肪方法的依从性较好，而低碳水化合物减肥方法则常常存在退出率较高的情况，也就是说，受试者不太愿意长期坚持。对于我国这样一个从小习惯于以碳水化合物食物为主食的国家，这种情况更为明显。人们宁愿接受少油的烹调方法，也不愿意接受一辈子不吃主食的生活。两三个月固然能够暂时忍受，但如果成年累月不吃淀粉类食物，人们会感觉不幸福。没有幸福感的事情，多数人是很难长期持续的。//所以，吃肉为主食，虽然短期因为酮症而快速减重，但除非你一辈子坚持这种吃法，否则只要开始恢复淀粉类主食，体重马上就会反弹——此前的成果化为乌有，而体重忽高忽低的波动非常有害健康，折腾自己有什么意义呢?//证明低碳水化合物减肥法好处的研究都是3-6个月的短期研究。国外有一年以上甚至两年以上的长期研究证明，从长期来说，不吃主食的减肥法并不优于吃主食而减脂肪的减肥法。如果不吃主食的减肥法真的那么成功，而且能够长期维持，怎么能解释欧美经历多次低碳水化合物减肥法的热潮之后，至今仍然肥胖率居高不下的事实呢?//5 低碳水化合物的饮食，肝肾的工作负担加重，并非人人适合。//低碳水化合物饮食中，主要能源从碳水化合物切换为蛋白质和脂肪，蛋白质代谢加强，产生的尿素增加，给肝脏和肾脏带来负担;脂肪不能彻底分解，而是产生酮酸，需要及时排除，更会增加肾脏的负担。一些代谢能力较弱的人采用这种膳食后会感觉身体疲劳，脸色和皮肤变差，记忆力下降。肝肾功能不全的人更不能采用这种吃法。//6 吃肉为主食，以中国的资源环境条件，是不可承受的。//最要紧的是，相比于以谷物为主食，以鱼肉为主食会大大增加资源消耗。在我国这样一个人口密集而农业资源不足，20%食物需要依赖进口的国家里，一部分人以鱼肉为主食，那么另一部分人只能饿死，所以这种饮食方式永远只能是少数人，在我国不具备广泛推广的可能性。//7 没有研究确认，低碳水化合物饮食比吃主食的低血糖反应饮食更能延长寿命。//很多西方的书上推崇石器时代饮食，但是别忘记一个事实，那就是古人的平均寿命都非常短，他们的吃法并不能预测老年后的情况。现代人的预期寿命已经长达70多岁甚至80岁以上，学习古人的吃法未必会有长寿效果。虽然有一些动物实验证明降低糖的供应可以延长寿命，也有研究证明降低餐后血糖反应有多种好处，但并没有证据显示，低碳水化合物饮食比正常吃主食，但选择低血糖反应食材的饮食更能促进长寿。//那么，饮食、健康和生态的综合解决方案是什么呢?很多研究已经提示了答案。//仍然吃主食，仍然摄入正常量的碳水化合物(每天从主食中摄入淀粉+果蔬中天然糖的总量约200-300克，减肥时最低不低于120克)，但更多地选择慢消化、高膳食纤维、低血糖反应的主食，比如燕麦、荞麦、黑米、红小豆、芸豆、干豌豆等各种杂粮，再配合大量的蔬菜和少量的鱼肉蛋奶，就是一个好答案。这种饮食结构，既能避免吃大米白面过度升高血糖的麻烦，可以避免过多摄入面筋蛋白的问题，又能减轻肝脏和肾脏的负担，大量研究证明，这种吃法也有利于降低肥胖、糖尿病、老年认知退化、心脑血管疾病和多种癌症的危险。而这正是中国居民膳食指南中所推荐的饮食方式。它符合国情，容易操作，不会引入更多的环境污染，而且能够长期持续而无损健康。（范志红）//来源：新华网//', 'http://images.meishij.net/p/20161018/f3d0ac75c61076303cd58b948332aeb0.jpg', 'http://images.meishij.net/p/20161019/042af4eea9ae9cf83daa8e5363fb3f98_150x150.jpg', 9, 1, NULL, 1);
 INSERT INTO `article` VALUES (19, '这5类食物不甜但糖分高', '2018-09-01', '原标题：糖友请注意!这5类食物不甜但糖分高//糖尿病人不宜吃糖分高的食物，这几乎是每个成年人都知道的常识。但是很多人不知道，有些吃起来不甜的食物，却是“含糖大户”，如鱼香肉丝、面包等。下面，我们就来看看有哪些糖分高的食物被我们忽略了，以及糖尿病人应该要注意的饮食禁忌。//5类食物不甜但糖分高//1、超市中的速冲糊粉是含糖大户//因为单纯的谷、豆等磨成的粉口感不佳，甚至有一种五谷杂豆特有的“土腥味”，因此，豆奶粉、藕粉、核桃粉等速冲糊糊类食品中往往会加入很多糖来调整口感。有的产品中的糖甚至排在配料表的第一位，购买时一定要多注意。//2、山楂片、话梅等酸味零食//山楂、话梅等本身有机酸含量丰富，口感较酸，加工中加入大量糖，口感才能酸甜适宜。有的山楂片中的糖含量高达70%～80%;而话梅的中的糖含量也不示弱，一般排在配料表第二位，仅次于梅子。//3、红烧肉、鱼香肉丝都是高糖//专家介绍，很多人做菜喜欢用糖调味，尤其是餐馆里的厨师更是喜欢大量用糖提味，一份红烧排骨、红烧鱼、鱼香肉丝大概加糖25~30克，红烧肉要加40~50克，最高的是糖醋排骨和糖醋里脊，每份要加入75克左右的糖。此外，一些市民喜爱吃的加工肉制品，如肉干、肉脯里也含有不少糖。//4、猕猴桃、柚子居然比西瓜含糖高//专家表示，别看西瓜吃起来甜，其实含糖量仅为4.2%;而猕猴桃吃起来较酸，含糖量却是10%。含糖量在9%~13%之间的水果还有苹果、杏、无花果、橙子、荔枝等。而柿子、桂圆、香蕉、杨梅、石榴等水果，含糖量超过了14%。//5、酸奶、面包里也有隐形糖//如果你自己在家做面包或酸奶就会发现，一般的白面包100克中需加入10-20克左右白糖，这还不算其本身的淀粉含量。酸奶的制作配方是100克牛奶配10克左右白糖。//糖尿病人的饮食禁忌//1、不宜吃各种糖、蜜饯、水果罐头、汽水、果汁、果酱、冰淇淋、甜饼干、甜面包及糖制糕点等，因为这些食品含糖很高，食用易出现高血糖;//2、不宜吃含高胆固醇的食物及动物脂肪，如动物的脑、肝、心、肺、腰、蛋黄、肥肉、黄油、猪牛羊油等，这些食物易使血脂升高，易发生动脉粥样硬化;//3、不宜饮酒，酒精能使血糖发生波动，空腹大量饮酒时，可发生严重的低血糖，而且醉酒往往能掩盖低血糖的表现，不易发现，非常危险。//来源：家庭医生在线//', 'http://images.meishij.net/p/20161229/09a259b2e182f14f0c3d23818a2ca7d3.jpg', 'http://images.meishij.net/p/20161018/5383b5b8f53e4afbcf3f989b732f1790_150x150.jpg', 0, 1, NULL, 1);
 INSERT INTO `article` VALUES (20, '你被“食品安全新闻”坑过吗？', '2018-10-01', '11月20日，由国家食品药品监督管理总局新闻宣传中心、中国食品工业协会主办的2016食品安全科普创新竞赛启动仪式在北京大学新闻传播学院举行。国家食品安全风险交流中心的钟凯博士在启动仪式上给准备参与竞赛的大学生分析了那些年食品安全新闻背后的故事。看完这些故事，你就会发现，这个世界上最远的路，就是食品安全新闻背后的套路。比如螃蟹里的二噁英哪里来的?鸭血里检出猪的DNA能说明什么?是“毒豆芽”新闻反转的快，还是转基因大豆更扑朔迷离?//螃蟹里的二噁英是“人为添加”//螃蟹里怎么会有二噁英，是不是有人故意添加的?其实也算是，主要是人为添加到环境中去的，比如你早上刚扔掉的那袋子没做分类的垃圾。//如果垃圾燃烧时的温度不够，也会产生二噁英。而之所以常常无法达到高温就是因为我们垃圾中的水分太多。说白了，还是我们分类垃圾形同虚设惹的祸。厨余垃圾混在其他类别的垃圾中，导致了垃圾燃烧的不充分。//另外，越南战争的时候，美军使用一种叫“橙剂”的落叶剂去杀死树木，以对付丛林里的越南游击队。而这个“橙剂”里面就有二噁英的杂质。“橙剂”不止污染了植物土壤和水源，也导致了当地的越南小孩身体的畸形。//此外，还有一些其他的形式会导致二噁英混入我们的环境中去，但从来都没有人专门去生产二噁英。所以，不要再问二噁英怎么会跑到螃蟹里，螃蟹是不愿意的，环境也是不愿意的，还不是我们人类同胞惹的祸?不过好在这次事件中，螃蟹中二噁英的含量，正常食用螃蟹的情况下不会造成健康问题。//鸭血里有猪的DNA要怪案板//前几年曾有条新闻，通过给几家比较知名的火锅店里的鸭血测DNA，结果发现有猪的DNA，就表示鸭血中含有猪血。//其实，平时常下厨房的人都知道，流水的菜肴、铁打的案板。一道一道菜地做下来，案板上会留下很多不同食材的碎屑。而DNA检测是非常灵敏的，那些先后在菜板上粉墨登场的食材的DNA自然就“交叉感染”了。//这个新闻最后的结局也是一样，的确是猪肉类菜肴的DNA沾到了鸭血上，所以才会导致检出了猪的DNA。因此在没有还原“案发现场”之前，我们又被所谓的因果联系给忽悠了。其实，可以测测里面有没有人的DNA，说不定标题党们会搞出更大的新闻。//“毒豆芽”的冤假错案//其实，那些年“毒豆芽”以及各种导致性早熟的食物谣言，都是因为大家没正眼看待“植物生长调节剂”。有人觉得植物生长调节剂不就是植物激素嘛。行，你可以这么说，但是你说吃了植物激素人类就会性早熟，那就是扯淡了。花粉是植物的精子，你吃了花粉会怀孕吗，生出来的难道是葫芦娃?//当年，“毒豆芽”事件让上千人被抓，而所谓“嫌疑犯”们最后都被释放。事实上，合理使用植物生长调节剂不会对人类健康造成严重危害，而是让我们的食物生长得更好，也让我们的食物成熟期能够被控制，以方便采摘。//美国转基因大豆真是喂猪的//有人常常拿“美国的转基因大豆都是喂猪的，只有中国人当食物”说事儿。其实，这句话也不全错。根据美国农业部的数据显示：美国的转基因大豆中80%是豆粕，20%是油脂。豆粕中97%用来做动物饲料，3%做食物。而油脂中68%都是用于食物的。所以你可以说美国的转基因大豆的豆粕都是用来喂猪的，就像你也得承认美国转基因大豆的油大部分是用来喂人的一样。//其实，你可能不知道的是中国进口的美国转基因大豆大部分也是用来喂猪的。为什么要进口美国的大豆喂猪，因为你们爱吃猪肉呗!如果你去查一下中国人每年吃掉的猪肉量，你就会发现需要多少饲料了。文/本报记者  张艳艳//来源：北京青年报//', 'http://images.meishij.net/p/20161206/8346aceb273dd8e628a259d1605824a0.jpg', 'http://images.meishij.net/p/20161014/d8a8f1deb2466b92a7dc90a26598d94c_150x150.jpg', 0, 1, NULL, 1);
 INSERT INTO `article` VALUES (21, '食物掉地上5秒内捡起还能吃?', '2018-11-01', '如果家里有猫、狗等宠物的话，掉落在地上的食物最好还是别再捡起来吃了。//很多人可能从小就面临过这样的选择：拿着一样美味正准备大快朵颐时，却不小心失手让它掉在了地上，这时还可以捡起来吃么?从前，想捡起来继续吃的人用“不干不净，吃了没病”来安慰自己，但近年来，人们又听说了“5秒原则”——5秒内捡起食物，细菌就来不及“爬”上去。然而，这种说法真的对么?掉到地上的食物究竟还能不能吃?//细菌转移几乎立即发生//掉在地上的东西吃不吃，很多时候人们采用的是经验法则，取决于这样食品贵不贵、是否充饥必须或者地面的干净程度。而“5秒原则”似乎在告诉人们，只要“手速”够快，就能够捡回未被污染的食物。不过，“五秒法则”究竟是谁提出来的?//食品安全博士钟凯介绍，“5秒原则”其实是美国芝加哥一名高中生的猜想，她还因此获得了2004年的“搞笑诺贝尔奖”。而这样一个“不靠谱”的起源，似乎也注定了“5秒原则”没有科学性。//早在2006  年，美国克莱姆森大学的研究人员就用沙门氏菌做了研究，他们当时用香肠片测试了木头、地毯和瓷砖三种地面。结果发现，食物掉在地上的时间和沾染细菌的数量并没有明显关系，5秒、30秒和60秒的结果是差不多的，这也意味着“5秒原则”并不可靠。//探索频道的“谣言终结者”节目也做过类似实验，发现食物掉地上不到2秒钟就能沾染细菌。//美国罗格斯大学的一项研究中，研究人员用128种排列组合模拟“食物掉地上”的情形，每种情形重复测试20次，其中包括食物掉地上1秒、5秒、30秒和300秒的效果，结果发现细菌能在1秒内成功占领掉落的食物。//由此可见，细菌的转移几乎是立即发生的，就算你有闪电般的手速也没用。//湿度和水分更易转移细菌//如果时间长短和细菌转移没有必然联系，那么影响细菌转移的到底是什么因素呢?钟凯博士表示，细菌转移最重要的因素是湿度和水分，当掉在地上的食物是湿的，或者地面本身是湿的，这样的食物受污染风险大大增加。大肠杆菌、沙门氏菌和李斯特菌都非常喜欢潮湿的环境，它们会从水里吸收所需的营养，然后进行生长和繁殖。//比如，西瓜掉在地上不到1秒钟就可以沾染大量细菌，这是因为它表面的水分很多，而表面干燥的橡皮糖沾染细菌最少。而油性表面的影响要比水分小得多，同样的研究中，面包片和涂黄油的面包片沾染细菌的数量并没有明显差异。//其他影响细菌转移的因素则众说纷纭。罗格斯大学的研究人员认为，地面平整度也会影响细菌转移，平整光滑的瓷砖、不锈钢表面更容易让细菌沾染食品，这很可能是因为平整表面可以提供更大的实际接触面积，而地毯粗糙的纤维表面相对而言更不容易让细菌沾染食品。//而克莱姆森大学的研究人员则认为食物沾染细菌的数量主要取决于地面的清洁程度。地毯更有利于细菌存活，它的带菌量可以是普通地面的成百上千倍，因此，食物从地毯沾染的细菌可能比地板更多。//“捡着吃”最需提防致病菌//虽然掉到地上的食物会很快沾染上细菌，但这并不意味着吃掉以后就会立刻生病。这是因为，日常环境中存在的大多数细菌并不致病。地面通常比较干燥，而多数致病菌并不喜欢这样的环境，这也是为什么许多人吃了掉在地上的食物，却“不干不净吃了没病”的原因。//而人们对于“干净”的判断也很主观。根据专家们的说法，厨房和浴室的地板并不比家里其他地方更脏，水槽的受污染情况最严重。一般民宅内的细菌绝大部分是无害的，如果经常擦地、且更换拖布头保持拖布干燥，那家中地面的细菌密度很可能比你手上、手机或纸币上的细菌密度小。//虽然研究者们进行了大量实验，但仍没有就“吃下掉在地板上的食物会不会致病”给出明确答案。细菌的转移速度是次要的，更关键的是地上到底有哪些菌。//钟凯表示，总而言之，食物掉地上沾染细菌是不可避免的，最佳的选择当然是不吃，但如果你不介意吃一些无害的细菌，通常也不会有事。需要提醒的是，如果家里养了宠物或有老鼠光临，最好还是谨慎一些，因为它们更容易携带致病菌乃至寄生虫。//来源： 新闻晨报//', 'http://images.meishij.net/p/20161215/546b12c32c048f340573659c311024c6.jpg', 'http://images.meishij.net/p/20161013/9bd817c2e7f4a8df880dd636701328bd_150x150.jpg', 0, 1, NULL, 1);
@@ -1305,15 +1305,11 @@ CREATE TABLE `attention`  (
   INDEX `fk_fansId_userinfo_idx`(`fansId`) USING BTREE,
   CONSTRAINT `fk_fansId_userinfo` FOREIGN KEY (`fansId`) REFERENCES `userinfo` (`userid`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_userId_userinfo` FOREIGN KEY (`userId`) REFERENCES `userinfo` (`userid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 63 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '粉丝表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 76 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '粉丝表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of attention
 -- ----------------------------
-INSERT INTO `attention` VALUES (40, 2, 5);
-INSERT INTO `attention` VALUES (41, 2, 6);
-INSERT INTO `attention` VALUES (42, 3, 5);
-INSERT INTO `attention` VALUES (43, 6, 5);
 INSERT INTO `attention` VALUES (44, 2, 6);
 INSERT INTO `attention` VALUES (45, 7, 6);
 INSERT INTO `attention` VALUES (46, 9, 6);
@@ -1331,6 +1327,7 @@ INSERT INTO `attention` VALUES (57, 12, 8);
 INSERT INTO `attention` VALUES (61, 12, 3);
 INSERT INTO `attention` VALUES (62, 27, 3);
 INSERT INTO `attention` VALUES (63, 25, 3);
+INSERT INTO `attention` VALUES (65, 12, 658);
 
 -- ----------------------------
 -- Table structure for comment
@@ -1349,12 +1346,26 @@ CREATE TABLE `comment`  (
   INDEX `fk_myadmin_comment_idx`(`myadminId`) USING BTREE,
   CONSTRAINT `fk_details_comment` FOREIGN KEY (`detailsId`) REFERENCES `recipedetails` (`detailsid`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_userInfo_commment` FOREIGN KEY (`userId`) REFERENCES `userinfo` (`userid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of comment
 -- ----------------------------
-INSERT INTO `comment` VALUES (1, 1, '11111', 11, 1, '1');
+INSERT INTO `comment` VALUES (1, 1, '真好吃', 11, 1, '1');
+INSERT INTO `comment` VALUES (3, 4, '我是余哎呀呀呀呀', 11, 4, '2');
+INSERT INTO `comment` VALUES (6, 7, '我是测试1号', 11, 4, NULL);
+INSERT INTO `comment` VALUES (7, 8, '我是测试2', 11, 4, NULL);
+INSERT INTO `comment` VALUES (16, 3, 'ssss', 11, 4, '2019-03-26 11:42:59.440');
+INSERT INTO `comment` VALUES (20, 658, '<img src=\"/static/eoim/4.png\" class=\"eoimPic\" width=\"20px\" height=\"20px\" style=\"margin-left: 4px; margin-right:4px; margin-top: 2px;\">', 11, 6, '2019-03-26 19:32:14.442');
+INSERT INTO `comment` VALUES (21, 3, '正好', 11, 46, '2019-03-27 01:46:49.185');
+INSERT INTO `comment` VALUES (22, 658, '蛤蛤蛤哈', 11, 42, '2019-03-27 02:10:58.580');
+INSERT INTO `comment` VALUES (25, 658, '哈哈，真的好好吃<img src=\"/static/eoim/11.png\" class=\"eoimPic\" width=\"20px\" height=\"20px\" style=\"margin-left: 4px; margin-right:4px; margin-top: 2px;\">', 11, 10, '2019-03-30 11:48:58.654');
+INSERT INTO `comment` VALUES (26, 1, '蛤蛤蛤哈', 11, 10, '2019-03-30 11:51:01.087');
+INSERT INTO `comment` VALUES (27, 3, '测试啊<img src=\"/static/eoim/68.png\" class=\"eoimPic\" width=\"20px\" height=\"20px\" style=\"margin-left: 4px; margin-right:4px; margin-top: 2px;\">', 11, 10, '2019-03-30 11:53:20.157');
+INSERT INTO `comment` VALUES (28, 660, 'H哈哈哈哈哈哈哈哈哈哈哈', 11, 10, '2019-03-30 11:54:00.134');
+INSERT INTO `comment` VALUES (30, 658, '测试啊<img src=\"/static/eoim/1.png\" class=\"eoimPic\" width=\"20px\" height=\"20px\" style=\"margin-left: 4px; margin-right:4px; margin-top: 2px;\">', 11, 4, '2019-03-31 00:55:41.966');
+INSERT INTO `comment` VALUES (33, 658, '上传成功<div><br></div>', 11, 137, '2019-04-02 16:16:45.079');
+INSERT INTO `comment` VALUES (34, 658, '正好', 11, 154, '2019-04-02 23:23:21.308');
 
 -- ----------------------------
 -- Table structure for dietlist
@@ -1633,7 +1644,7 @@ CREATE TABLE `recipeclassify`  (
   INDEX `recipeClassifyId_7`(`recipeClassifyId`) USING BTREE,
   INDEX `recipeClassifyId_8`(`recipeClassifyId`) USING BTREE,
   INDEX `recipeClassifyId_9`(`recipeClassifyId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of recipeclassify
@@ -1697,7 +1708,7 @@ CREATE TABLE `recipedetails`  (
   INDEX `detailsId_34`(`detailsId`) USING BTREE,
   CONSTRAINT `fk_rclassify_rdetails` FOREIGN KEY (`recipeClassifyId`) REFERENCES `recipeclassify` (`recipeclassifyid`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_userId_authid` FOREIGN KEY (`userId1`) REFERENCES `userinfo` (`userid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 121 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱详情' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 155 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱详情' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of recipedetails
@@ -1712,9 +1723,7 @@ INSERT INTO `recipedetails` VALUES (10, '鱼香茄子', '这道菜味道鲜美�
 INSERT INTO `recipedetails` VALUES (11, '三鲜肉饼', '街上很多卖饼的，但以死面的为主。很香很脆但是一般都比较硬。两岁多的孩子咀嚼能力还是有限的，太硬的饼不容易嚼烂，所以我做了发面的肉饼，添加了胡萝卜和黑木耳，有菜有肉有主食，营养的呢。', 'https://cp1.douguo.com/upload/caiku/a/9/5/600x400_a9243cb747e062fe0256935adc1fdaa5.jpg', 11, 115, NULL, 7, '<5分钟', '4人份');
 INSERT INTO `recipedetails` VALUES (12, '五彩焖饭', '多多小朋友从7月1号开始正式放暑假，习惯了她一日三餐在幼儿园吃了，猛的放了假在家呆着，我反而有些不适应了，尤其是家里还多了个小妹妹。没放假的时候，平常爸爸上班就把多多带走去幼儿园去了，我傍晚再抱着妹妹去接多多，所以平时中午就我一个人吃饭，随便糊弄一下都可以了，或者早餐多做点，中午饭就出来了。而且妹妹也总要抱着，我也没时间做午饭，就算吃剩饭也没个点，可是多多在家了就不一样了，得一天三餐按点吃，还得有水果有点心，我这工作量一下增加了不止一倍啊！而且妹妹还是不按点睡觉，有时候睡有时候一直不睡，我也经常单手抱着妹妹单手做饭，甚至昨天都单手揉面整形做馒头了，不断解锁新技能啊！好，言归正传，今天分享的这个焖饭，做法很简单，而且饭菜一锅出，好做又好吃，多多小朋友也很喜欢。像平常就我和多多两个人，一大人一小孩子能吃多少菜，炒菜吧，种类还不够多，还得顾及到多多小朋友身体发育需要，让她尽可能吃的食物种类多样化，我还得节约时间，因为随时随地有可能妹妹就要召唤我了。没办法，一个人带俩娃的日子就是这样紧张忙碌绝对的充实！', 'https://cp1.douguo.com/upload/caiku/2/3/7/600x400_234252b455d69118c6aa993d0f3c6707.jpg', 12, 115, NULL, 7, '<15分钟', '4人份');
 INSERT INTO `recipedetails` VALUES (13, '肉酱意大利面', '', 'https://cp1.douguo.com/upload/caiku/0/8/9/600x400_08a96d55fbcd28a466276767af7ab329.jpg', 13, 115, NULL, 7, '<30分钟', '未知');
-INSERT INTO `recipedetails` VALUES (14, '田园土豆饼', '这阵子吃土豆吃上瘾了，反正土豆也可以减肥，多吃点也不怕。这次做的土豆饼口感丰富，绵软中带点芦笋、胡萝卜的爽脆，很是不错。', 'https://cp1.douguo.com/upload/caiku/9/9/e/600x400_99d0489f647f19fb47be7bdf6a84827e.jpg', 14, 115, NULL, 7, '<30分钟', '4人份');
-INSERT INTO `recipedetails` VALUES (15, '山药养生粥', '最近因为宝宝心脏上的问题，一直都是在医院度过的，自己心心念的厨房致欲珐琅锅一直在家里默默的等着，直到今天才上传菜谱，实在不好意思！回到家迫不及待的就是用它来给宝贝做顿可口的食物。先来个山药养生粥，最适合病后体弱者的粥，营养丰富还不会给肠胃造成负担，还具有延年益寿、美容养颜哦！老少咸宜！', 'https://cp1.douguo.com/upload/caiku/9/e/7/600x400_9ec980844c89d94c8ce4138a02987c47.jpeg', 15, 115, NULL, 7, '<30分钟', '未知');
-INSERT INTO `recipedetails` VALUES (16, '瘦身减肥养生美容红豆汤', '减肥安排:早上起床后喝一杯蜜醋水，蜂蜜一勺，白醋半勺，然后加250毫升的温开水空腹喝下。早上就吃这个食谱的红豆汤，趁热喝下。中午饿了就吃苹果和酸奶，晚上还是红豆汤，晚上7点之前必须喝完。是汤和里面的食物一起吃掉。坚持了一周，我已经瘦了6斤，皮肤也变得很好。', 'https://cp1.douguo.com/upload/caiku/5/2/e/600x400_5262a1e2e6a5432890ebe7d90e77b42e.jpg', 16, 115, NULL, 7, '<5分钟', '4人份');
+INSERT INTO `recipedetails` VALUES (15, '山药养生粥', '最近因为宝宝心脏上的问题，一直都是在医院度过的，自己心心念的厨房致欲珐琅锅一直在家里默默的等着，直到今天才上传菜谱，实在不好意思！回到家迫不及待的就是用它来给宝贝做顿可口的食物。先来个山药养生粥，最适合病后体弱者的粥，营养丰富还不会给肠胃造成负担，还具有延年益寿、美容养颜哦！老少咸宜！', 'https://cp1.douguo.com/upload/caiku/9/e/7/600x400_9ec980844c89d94c8ce4138a02987c47.jpeg', 658, 115, NULL, 7, '<30分钟', '未知');
 INSERT INTO `recipedetails` VALUES (17, '微博疯传的拌面', '之前在微博上看到好多人在转这个一夫食堂的半半拌面，自己就试着做了一下，个人觉得味道不错，就分享给大家～之前的菜谱里没有写辣椒油，因为我比较喜欢吃辣，吃什么都喜欢放一点辣椒油，所以就忘写在里面了，辣椒油的做法非常简单，干辣椒末，芝麻，辣椒粉放在碗里，锅内烧热油，直接淋在碗里就好了。', 'https://cp1.douguo.com/upload/caiku/e/f/5/600x400_ef77de485e5e4d04bd35da3d7db64005.jpg', 17, 115, NULL, 7, '<5分钟', '3人份');
 INSERT INTO `recipedetails` VALUES (18, '快手炒面', '夏季里，买来的时蔬，不少是不太易于保存的，而像胡萝卜、卷心菜等，储存的时间长，在短时间内还可以做出美味的快手炒面，这里就和大家分享。', 'https://cp1.douguo.com/upload/caiku/a/9/e/600x400_a99b55b4c6379bedb8c351529f1eee9e.jpg', 18, 115, NULL, 7, '<15分钟', '3人份');
 INSERT INTO `recipedetails` VALUES (19, '番茄鸡蛋卷饼', '白煮蛋，鸡蛋羹，煎荷包蛋宝宝慢慢的都不爱吃了，宝宝的早餐越来越单薄。做为妈咪，好想每天都有既让宝宝饱肚又能确保营养却操作简便的早餐食谱。今天看到满冰箱红彤彤的大番茄，灵机一动，番茄鸡蛋饼？以前看到朋友做过。所以操刀说干就干，结果品相稍逊外，算是大获全胜，宝宝非常喜欢，吃了大半个!', 'https://cp1.douguo.com/upload/caiku/8/a/6/600x400_8a79e61ee329fe1445a0747439cf6076.jpg', 19, 115, NULL, 7, '<30分钟', '2人份');
@@ -1812,6 +1821,7 @@ INSERT INTO `recipedetails` VALUES (117, '白菜肉片汤年糕', '汤年糕，�
 INSERT INTO `recipedetails` VALUES (118, '鱼头豆腐汤', '绝对的香浓鲜美，并且还有清热润燥、健脾补气、温中暖胃、美容润肤的功效。', 'https://cp1.douguo.com/upload/caiku/5/4/8/600x400_54e5e992bee5eb0575aa9a524259f508.jpg', 28, 114, NULL, 2, '<30分钟', '2人份');
 INSERT INTO `recipedetails` VALUES (119, '番茄金针菇豆腐汤', '', 'https://cp1.douguo.com/upload/caiku/4/3/f/600x400_43ddeb2793ab6502645289d9bd0535bf.jpg', 29, 114, NULL, 2, '<30分钟', '2人份');
 INSERT INTO `recipedetails` VALUES (120, '山药枸杞乌鸡汤', '', 'https://cp1.douguo.com/upload/caiku/7/b/f/600x400_7bb8f013f6589908e794b31f64e113ef.jpg', 30, 114, NULL, 2, '<60分钟', '2人份');
+INSERT INTO `recipedetails` VALUES (154, '测试1', '第一次测试', 'http://localhost:3000/baseImg/upload_0a9d3cdeadfec5f7318a0fc33f3a0ee3.jpg', 658, 0, NULL, 7, '5', '2');
 
 -- ----------------------------
 -- Table structure for recipefood
@@ -1825,7 +1835,7 @@ CREATE TABLE `recipefood`  (
   PRIMARY KEY (`foodId`) USING BTREE,
   INDEX `fk_food_details1_idx`(`detailsId`) USING BTREE,
   CONSTRAINT `fk_food_details1` FOREIGN KEY (`detailsId`) REFERENCES `recipedetails` (`detailsid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 479 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱食材' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 501 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱食材' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of recipefood
@@ -2308,6 +2318,23 @@ INSERT INTO `recipefood` VALUES (475, ' 猪肝', '1小块', 110);
 INSERT INTO `recipefood` VALUES (476, ' 番茄', '2个', 110);
 INSERT INTO `recipefood` VALUES (477, ' 白玉菇', '1小包', 110);
 INSERT INTO `recipefood` VALUES (478, '淀粉', '1勺', 110);
+INSERT INTO `recipefood` VALUES (483, '23', '33', 137);
+INSERT INTO `recipefood` VALUES (484, '的', '3', 142);
+INSERT INTO `recipefood` VALUES (485, '2', '2', 142);
+INSERT INTO `recipefood` VALUES (486, '2', '2', 142);
+INSERT INTO `recipefood` VALUES (487, '米', '10g', 143);
+INSERT INTO `recipefood` VALUES (488, '皮蛋', '2个', 143);
+INSERT INTO `recipefood` VALUES (489, '青菜', '250g', 143);
+INSERT INTO `recipefood` VALUES (490, '1', '1', 145);
+INSERT INTO `recipefood` VALUES (491, '2', '2', 145);
+INSERT INTO `recipefood` VALUES (492, '1', '1g', 147);
+INSERT INTO `recipefood` VALUES (493, '2', '3g', 147);
+INSERT INTO `recipefood` VALUES (494, '1', '1', 150);
+INSERT INTO `recipefood` VALUES (495, '2', '2', 150);
+INSERT INTO `recipefood` VALUES (496, '3', '3', 150);
+INSERT INTO `recipefood` VALUES (497, '1', '1', 153);
+INSERT INTO `recipefood` VALUES (499, '1', '1', 154);
+INSERT INTO `recipefood` VALUES (500, '2', '2', 154);
 
 -- ----------------------------
 -- Table structure for recipestep
@@ -2322,7 +2349,7 @@ CREATE TABLE `recipestep`  (
   PRIMARY KEY (`recipeStepId`) USING BTREE,
   INDEX `fk_practice_details1_idx`(`detailsId`) USING BTREE,
   CONSTRAINT `fk_practice_details1` FOREIGN KEY (`detailsId`) REFERENCES `recipedetails` (`detailsid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1252 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱步骤' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1295 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜谱步骤' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of recipestep
@@ -3566,6 +3593,47 @@ INSERT INTO `recipestep` VALUES (1248, 2, ' 锅烧热放花生油，鱼下锅煎
 INSERT INTO `recipestep` VALUES (1249, 3, ' 倒入开水煮5分钟左右，直至汤成奶白色，放入豆腐、香菇块一起大概煮3、4分钟。', 'https://cp1.douguo.com/upload/caiku/c/2/d/200_c284a7400494ca7a4d87e76433c889ad.png', 95);
 INSERT INTO `recipestep` VALUES (1250, 4, ' 撒人枸杞和葱花煮1分钟左右，最后用盐调味关火焖一会儿。', 'https://cp1.douguo.com/upload/caiku/8/0/4/200_803459ef92ea54bc0fe971f77f96d744.png', 95);
 INSERT INTO `recipestep` VALUES (1251, 5, ' 成品。', 'https://cp1.douguo.com/upload/caiku/e/6/1/200_e644f6237f027439a4c816e8677104e1.png', 95);
+INSERT INTO `recipestep` VALUES (1254, 1, '哈哈', 'aaa', 132);
+INSERT INTO `recipestep` VALUES (1255, 2, '哈哈', 'aaa', 132);
+INSERT INTO `recipestep` VALUES (1256, 1, '[', 'http://localhost:3000/recipeImg/upload_27f1d7acedd4429e5aaae73aae0ca4e1.jpg', 135);
+INSERT INTO `recipestep` VALUES (1257, 2, '\"', 'http://localhost:3000/recipeImg/upload_27f1d7acedd4429e5aaae73aae0ca4e1.jpg', 135);
+INSERT INTO `recipestep` VALUES (1258, 3, '第', NULL, 135);
+INSERT INTO `recipestep` VALUES (1259, 4, '一', NULL, 135);
+INSERT INTO `recipestep` VALUES (1260, 5, '步', NULL, 135);
+INSERT INTO `recipestep` VALUES (1261, 6, '\"', NULL, 135);
+INSERT INTO `recipestep` VALUES (1262, 7, ',', NULL, 135);
+INSERT INTO `recipestep` VALUES (1263, 8, '\"', NULL, 135);
+INSERT INTO `recipestep` VALUES (1264, 9, '第', NULL, 135);
+INSERT INTO `recipestep` VALUES (1265, 10, '二', NULL, 135);
+INSERT INTO `recipestep` VALUES (1266, 11, '步', NULL, 135);
+INSERT INTO `recipestep` VALUES (1267, 12, '\"', NULL, 135);
+INSERT INTO `recipestep` VALUES (1268, 13, ']', NULL, 135);
+INSERT INTO `recipestep` VALUES (1269, 1, '第一步', 'http://localhost:3000/recipeImg/upload_e3932084d6bdb2b892fff0547651ccdf.jpg', 137);
+INSERT INTO `recipestep` VALUES (1270, 2, '第二步', 'http://localhost:3000/recipeImg/upload_e3932084d6bdb2b892fff0547651ccdf.jpg', 137);
+INSERT INTO `recipestep` VALUES (1271, 1, '第一步', 'http://localhost:3000/recipeImg/upload_52b331929b830eabb7e062c4ee739a4a.jpg', 138);
+INSERT INTO `recipestep` VALUES (1272, 2, '第二步', 'http://localhost:3000/recipeImg/upload_52b331929b830eabb7e062c4ee739a4a.jpg', 138);
+INSERT INTO `recipestep` VALUES (1273, 3, '第三步', 'http://localhost:3000/recipeImg/upload_52b331929b830eabb7e062c4ee739a4a.jpg', 138);
+INSERT INTO `recipestep` VALUES (1274, 1, '12', 'http://localhost:3000/recipeImg/upload_3d52295b474dc24dcd5b0b7aaaa3fb16.jpg', 139);
+INSERT INTO `recipestep` VALUES (1275, 2, '12', 'http://localhost:3000/recipeImg/upload_3d52295b474dc24dcd5b0b7aaaa3fb16.jpg', 139);
+INSERT INTO `recipestep` VALUES (1276, 1, '1', 'http://localhost:3000/recipeImg/upload_3f5d69c77c8fcb45c4ed74fe61f3dac8.jpg', 140);
+INSERT INTO `recipestep` VALUES (1277, 2, '2', 'http://localhost:3000/recipeImg/upload_3f5d69c77c8fcb45c4ed74fe61f3dac8.jpg', 140);
+INSERT INTO `recipestep` VALUES (1278, 1, '12', 'http://localhost:3000/recipeImg/upload_9b3fc519fac1f93f6c4978a3f6909a62.jpg', 141);
+INSERT INTO `recipestep` VALUES (1279, 2, '4', 'http://localhost:3000/recipeImg/upload_9b3fc519fac1f93f6c4978a3f6909a62.jpg', 141);
+INSERT INTO `recipestep` VALUES (1280, 1, '2', 'http://localhost:3000/recipeImg/upload_e83f053fdd0b3a8c483ab34329f4d980.jpg', 142);
+INSERT INTO `recipestep` VALUES (1281, 2, '33', 'http://localhost:3000/recipeImg/upload_e83f053fdd0b3a8c483ab34329f4d980.jpg', 142);
+INSERT INTO `recipestep` VALUES (1282, 1, '测试1', 'http://localhost:3000/recipeImg/upload_5bbe223a6f5a091bd4630645e3c16262.jpg', 143);
+INSERT INTO `recipestep` VALUES (1283, 2, '测试2', 'http://localhost:3000/recipeImg/upload_5bbe223a6f5a091bd4630645e3c16262.jpg', 143);
+INSERT INTO `recipestep` VALUES (1284, 3, '测试3', 'http://localhost:3000/recipeImg/upload_5bbe223a6f5a091bd4630645e3c16262.jpg', 143);
+INSERT INTO `recipestep` VALUES (1285, 1, '22', 'http://localhost:3000/recipeImg/upload_c009ce21e297f1474ff0103189ab3494.jpg', 145);
+INSERT INTO `recipestep` VALUES (1286, 2, '', 'http://localhost:3000/recipeImg/upload_c009ce21e297f1474ff0103189ab3494.jpg', 145);
+INSERT INTO `recipestep` VALUES (1287, 1, '第一步', 'http://localhost:3000/recipeImg/upload_a5256b9abfcac8910c845be6bc86e31f.jpg', 147);
+INSERT INTO `recipestep` VALUES (1288, 2, '第二步', 'http://localhost:3000/recipeImg/upload_a5256b9abfcac8910c845be6bc86e31f.jpg', 147);
+INSERT INTO `recipestep` VALUES (1289, 1, '1', 'http://localhost:3000/recipeImg/upload_b74267c70f41fc3d40b83af34a168d4f.jpg', 150);
+INSERT INTO `recipestep` VALUES (1290, 2, '2', 'http://localhost:3000/recipeImg/upload_b74267c70f41fc3d40b83af34a168d4f.jpg', 150);
+INSERT INTO `recipestep` VALUES (1291, 1, '1', 'http://localhost:3000/recipeImg/upload_a8ec98cbcbf4cedca5f29c89dff24116.jpg', 153);
+INSERT INTO `recipestep` VALUES (1292, 2, '2', 'http://localhost:3000/recipeImg/upload_a8ec98cbcbf4cedca5f29c89dff24116.jpg', 153);
+INSERT INTO `recipestep` VALUES (1293, 1, '第一步', 'http://localhost:3000/recipeImg/upload_a9627578adc6a02da34aa136dec43362.jpg', 154);
+INSERT INTO `recipestep` VALUES (1294, 2, '第二步', 'http://localhost:3000/recipeImg/upload_a9627578adc6a02da34aa136dec43362.jpg', 154);
 
 -- ----------------------------
 -- Table structure for stepslist
@@ -4015,12 +4083,12 @@ CREATE TABLE `userinfo`  (
   INDEX `userId_12`(`userId`) USING BTREE,
   INDEX `userId_13`(`userId`) USING BTREE,
   CONSTRAINT `userinfo_ibfk_1` FOREIGN KEY (`levelId`) REFERENCES `levellist` (`levelid`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 668 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 669 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of userinfo
 -- ----------------------------
-INSERT INTO `userinfo` VALUES (1, 'yu', '女', '13774639339', '1', 1, 0, '1553270439778_1553270439778.jpg', NULL);
+INSERT INTO `userinfo` VALUES (1, 'yu', '女', '13774639339', '1', 1, 0, 'https://i1.douguo.com/upload/photo/7/1/4/70_u66631823200625192505.jpg', NULL);
 INSERT INTO `userinfo` VALUES (2, 'sure汪', '女', NULL, NULL, 1, 0, 'https://i1.douguo.com/upload/photo/7/1/4/70_u66631823200625192505.jpg', NULL);
 INSERT INTO `userinfo` VALUES (3, 'aa', '女', NULL, '1', 1, 0, 'https://i1.douguo.com/upload/photo/c/3/d/70_u10575865864514182125.jpeg', NULL);
 INSERT INTO `userinfo` VALUES (4, '拾光机', '女', NULL, NULL, 1, 0, 'https://i1.douguo.com/upload/photo/e/d/8/70_u5428520263574205261134.jpg', NULL);
@@ -4050,8 +4118,8 @@ INSERT INTO `userinfo` VALUES (27, '小龙IRIS', '女', NULL, NULL, 1, 0, 'https
 INSERT INTO `userinfo` VALUES (28, '只爱飞飞自己', '女', NULL, NULL, 1, 0, 'https://i1.douguo.com/upload/photo/7/1/5/70_u20550357309480223632.jpg', NULL);
 INSERT INTO `userinfo` VALUES (29, '揪揪耳朵', '女', NULL, NULL, 1, 0, 'https://i1.douguo.com/upload/photo/3/4/d/70_u83631736559763230259.jpeg', NULL);
 INSERT INTO `userinfo` VALUES (30, '食尚小米', '女', NULL, NULL, 1, 0, 'https://i1.douguo.com/upload/photo/d/2/b/70_u75994969.jpg', NULL);
-INSERT INTO `userinfo` VALUES (658, '余哎呀', '女', '123', '1', 1, 0, '1553219039377_1553219039377.jpeg', '2019-01-09 15:45:32');
-INSERT INTO `userinfo` VALUES (660, '11', '女', '123', '123456', 1, 0, 'hhhh', '2018-03-11 00:00:00');
+INSERT INTO `userinfo` VALUES (658, '余哎呀', '女', '123', '123456', 1, 0, 'http://localhost:3000/headImg/1553967242279_1553967242279.jpg', '2019-01-09 15:45:32');
+INSERT INTO `userinfo` VALUES (660, '11', '女', '123', '123456', 1, 0, 'https://i1.douguo.com/upload/photo/7/1/5/70_u20550357309480223632.jpg', '2018-03-11 00:00:00');
 INSERT INTO `userinfo` VALUES (661, '11', '女', '123', '123456', 1, 0, 'hhhh', '2019-03-12 01:10:09');
 INSERT INTO `userinfo` VALUES (662, '11', '女', '123', '123456', 1, 0, 'hhhh', '2019-03-12 18:00:12');
 INSERT INTO `userinfo` VALUES (663, '1', '1', '1', '1', 1, 0, 'hhh', '2019-03-12 18:06:36');
@@ -4059,6 +4127,7 @@ INSERT INTO `userinfo` VALUES (664, '哎呀嘛', '女', '123', '222222', 1, 0, '
 INSERT INTO `userinfo` VALUES (665, '112', '男', '13774639339', '1', 1, 0, 'hhh', '2019-03-18 01:06:50');
 INSERT INTO `userinfo` VALUES (666, '667', '男', '13774639339', '111', 1, 0, 'hhh', '2019-03-18 01:19:30');
 INSERT INTO `userinfo` VALUES (667, 'r', '女', '13774639339', '1', 1, 0, 'hhh', '2019-03-18 16:15:02');
+INSERT INTO `userinfo` VALUES (668, '测试1', '女', '13774639339', '111111', 1, 0, 'hhh', '2019-03-31 00:43:47');
 
 -- ----------------------------
 -- Procedure structure for articleAddPriNum

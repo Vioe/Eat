@@ -13,6 +13,10 @@ class DB {
     addAttentionUser(userId,fansId){
         return DAO("insert into attention(userId,fansId) VALUES(?,?)",[userId,fansId]);
     }
+    //是否有关注过改用户
+    isAttentionUser(userId,fansId){
+        return DAO("select count(1) count from attention where userId=? and fansId=?",[userId,fansId])
+    }
 }
 
 module.exports = new DB();
