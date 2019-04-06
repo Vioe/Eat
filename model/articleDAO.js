@@ -35,6 +35,17 @@ class DB {
     addPraiseNum(articleId){
         return DAO("update article set articlePraiseNum=articlePraiseNum+1 where articleId = ?",[articleId]);
     }
+
+    //后台获取文章列表
+    getAdminArticle(){
+        return DAO("select articleId,articleTitle,articleTime,userId,classifyId from article",[]);
+    }
+
+    //管理员删除后台文章
+    delAdminArticle(articleId){
+        return DAO("delete from article where articleId = ?",[articleId])
+    }
+
 }
 
 module.exports = new DB();

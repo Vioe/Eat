@@ -27,5 +27,23 @@ module.exports={
         }catch (e) {
             ctx.body = {"code": 500,"message":"活动详情获取失败"+e.message,data:[]}
         }
+    },
+    getAdminActivity: async (ctx,next) => {
+        try{
+            let json = await activitydetailsDAO.getAdminAcitivity();
+            ctx.body = {"code": 200,"message":"ok",data:json};
+        }catch (e) {
+            ctx.body = {"code": 500,"message":"获取管理员活动列表失败"+e.message,data:[]}
+        }
+    },
+    //删除后台管理活动
+    delAdminActivity: async (ctx,next) =>{
+        try{
+            let activityId = ctx.params.activityId;
+            await activitydetailsDAO.delAdminActivity(activityId);
+            ctx.body = {"code": 200,"message":"删除活动成功",data:[]};
+        }catch (e) {
+            ctx.body = {"code": 500,"message":"删除后台活动失败"+e.message,data:[]}
+        }
     }
 };

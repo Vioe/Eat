@@ -62,4 +62,11 @@ router.get('/addPriseNum/:articleId',async (ctx,next) =>{
     await articleController.addPraiseNum(ctx,next)
 })
 
+//管理员删除后台文章
+router.get('/delAdminArticle/:articleId',async (ctx,next) => {
+    console.log(222)
+    console.log(ctx.params.articleId)
+    await articleController.delAdminArticle(ctx,next);
+})
+
 module.exports = router;

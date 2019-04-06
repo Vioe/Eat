@@ -72,6 +72,29 @@ module.exports = {
         }catch (e) {
            ctx.body = {"code": 500, "message": "点赞失败" + e.message, data: []}
         }
+    },
+
+    //获取后台文章列表
+    getAdminArticle: async (ctx,next) => {
+        try{
+            let json = await articleDAO.getAdminArticle();
+            ctx.body = {"code": 200,"message": "ok",data:json}
+        }catch (e) {
+            ctx.body = {"code": 500, "message": "获取后台文章列表失败" + e.message, data: []}
+        }
+    },
+
+    //管理员后台删除文章
+    delAdminArticle: async (ctx,next) => {
+        try{
+            let articleId = ctx.params.articleId;
+            console.log(1111111)
+            console.log(articleId)
+            await articleDAO.delAdminArticle(articleId);
+            ctx.body = {"code": 200,"message": "删除后台文章成功",data:[]}
+        }catch (e) {
+            ctx.body = {"code": 500, "message": "删除后台文章失败" + e.message, data: []}
+        }
     }
 
 }
