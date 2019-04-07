@@ -1,4 +1,7 @@
 const articleDAO = require("../model/articleDAO");
+const path = require('path')
+const fs = require('fs')
+const formidable = require("formidable");
 
 module.exports = {
     //获取所有文章
@@ -94,6 +97,27 @@ module.exports = {
             ctx.body = {"code": 200,"message": "删除后台文章成功",data:[]}
         }catch (e) {
             ctx.body = {"code": 500, "message": "删除后台文章失败" + e.message, data: []}
+        }
+    },
+
+    //后台管理员文章添加
+    addArticle: async (ctx,next) => {
+        try{
+            var form = new formidable.IncomingForm();
+            form.uploadDir = '../public/articleImg'    //设置文件存放路径
+            form.multiples = true;  //设置上传多文件
+            form.keepExtensions = true;
+            console.log(222)
+            form.keepExtensions = true;
+            form.parse(ctx.req,async function (err, fields, files) {
+                console.log(files.filename.path)
+                let myDate = JSON.parse(fields.myDate)
+                let articleImg = 'http://localhost:3000/articleImg/'+files.filename.path.slice(files.filename.path.lastIndexOf('\\')+1)
+                await articleDAO.addArticle(myDate,articleImg)
+            })
+            ctx.body = {"code":200, "message": "后台添加文章成功",data: []}
+        }catch (e) {
+            ctx.body = {"code":500, "message": "后台添加文章失败",data: []}
         }
     }
 

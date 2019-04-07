@@ -21,4 +21,9 @@ router.get('/getAdminArticle',async (ctx,next) => {
     await articleController.getAdminArticle(ctx,next);
 })
 
+//后台管理员添加文章
+router.post('/addArticle',async (ctx,next) => {
+    await articleController.addArticle(ctx,next);
+})
+
 module.exports = router

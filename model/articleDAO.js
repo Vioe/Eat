@@ -46,6 +46,11 @@ class DB {
         return DAO("delete from article where articleId = ?",[articleId])
     }
 
+    //后台管理员添加文章
+    addArticle(myDate,articleImg){
+        return DAO("insert into article(articleTitle,articleTime,articleContent,articleCoverImg,articlePic,articlePraiseNum,userId,articleBrief,classifyId) VALUES(?,?,?,?,?,?,?,?,?)",[myDate.articleTitle,new Date(),myDate.articleCtn,articleImg,articleImg,0,1,myDate.articleBrief,myDate.classify])
+    }
+
 }
 
 module.exports = new DB();
