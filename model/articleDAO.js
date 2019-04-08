@@ -38,7 +38,7 @@ class DB {
 
     //后台获取文章列表
     getAdminArticle(){
-        return DAO("select articleId,articleTitle,articleTime,userId,classifyId from article",[]);
+        return DAO("select articleId,articleTitle,articleTime,userId,classifyId from article ORDER BY articleTime DESC",[]);
     }
 
     //管理员删除后台文章
