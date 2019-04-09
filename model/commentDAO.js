@@ -13,6 +13,10 @@ class DB {
     addComment(param){
         return DAO("insert into comment(userId,commentContent,myadminId,detailsId,commentTime) VALUES(?,?,?,?,?)",[param.commentUserId,param.commentContent,11,param.commentDetailsId,new Date()]);
     }
+    //后台评论列表
+    commentList(){
+        return DAO("select commentId,userId,commentContent,detailsId,commentTime from comment ORDER BY commentTime DESC",[])
+    }
 }
 
 module.exports = new DB();

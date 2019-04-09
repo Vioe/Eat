@@ -32,5 +32,14 @@ module.exports={
         }catch (e) {
             ctx.body = {"code": 500,"message": "添加评论失败",data:[]};
         }
+    },
+    //后台评论列表
+    commentList: async (ctx,next) => {
+        try{
+            let json = await commentDAO.commentList()
+            ctx.body = {"code": 200,"message": "ok",data:json};
+        }catch (e) {
+            ctx.body = {"code": 500,"message": "获取评论列表失败",data:[]};
+        }
     }
 }

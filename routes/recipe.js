@@ -47,6 +47,14 @@ router.post('/addComment', async (ctx,next) =>{
 router.post('/addBaseRecipe',async (ctx,next) =>{
     await recipedetailsController.addBaseRecipe(ctx,next)
 })
+//后台菜谱列表
+router.get('/adminRecipeList',async (ctx,next) => {
+    await recipedetailsController.adminRecipeList(ctx,next)
+})
+//后台品论列表
+router.get('/commentList',async (ctx,next) => {
+    await commentController.commentList(ctx,next)
+})
 
 
 

@@ -45,5 +45,16 @@ module.exports={
         }catch (e) {
             ctx.body = {"code": 500,"message":"删除后台活动失败"+e.message,data:[]}
         }
+    },
+    //添加用户报名活动结果
+    addActivityResult:async (ctx,next) =>{
+        try{
+            let userId = ctx.params.userId;
+            let activityId = ctx.params.activityId;
+            await activitydetailsDAO.addActivityResult(userId,activityId)
+            ctx.body = {"code": 200,"message":"用户报名成功",data:[]};
+        }catch (e) {
+            ctx.body = {"code": 500,"message":"用户报名失败"+e.message,data:[]}
+        }
     }
 };

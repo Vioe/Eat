@@ -48,6 +48,10 @@ class DB {
     insertRecipeFood(foodName,foodNum,detailsId){
         return DAO('insert into recipefood(foodName,foodNum,detailsId) VALUES(?,?,?)',[foodName,foodNum,detailsId]);
     }
+    //后台菜谱列表
+    adminRecipeList(){
+        return DAO('select detailsId,recipeName,userId1,recipeClassifyId,recipePraiseNum from recipedetails ORDER BY detailsId DESC',[]);
+    }
 }
 
 module.exports = new DB();

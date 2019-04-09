@@ -20,6 +20,10 @@ class DB {
     delAdminActivity(activityId){
         return DAO("delete from activitydetails where activityId = ?",[activityId])
     }
+    //用户报名
+    addActivityResult(userId,activityId){
+        return DAO("insert into activityresult(userId,dietId,activityDetailsId) VALUES(?,?,?)",[userId,112,activityId])
+    }
 }
 
 module.exports = new DB();

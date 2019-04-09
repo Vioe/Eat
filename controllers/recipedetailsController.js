@@ -73,19 +73,14 @@ module.exports={
     },
     //添加菜谱
     addRecipe: async (ctx,next) => {
-        console.log(222)
         try{
-            console.log(11)
             let detialsId = await recipedetailsDAO.getAddRecipeId();
-            console.log(detialsId[0].detailsId)
             var form = new formidable.IncomingForm();
             form.uploadDir = '../public/recipeImg'    //设置文件存放路径
             form.multiples = true;  //设置上传多文件
             form.keepExtensions = true;
-            console.log(222)
             form.keepExtensions = true;
             form.parse(ctx.req,async function (err, fields, files) {
-                console.log("00000")
                 console.log(files)
                 console.log(fields)
                 console.log('---------------------')
@@ -151,5 +146,13 @@ module.exports={
             ctx.body = {"code":500, "message": "插入基础菜谱失败",data: []}
         }
     },
-
+    //后台菜谱列表
+    adminRecipeList: async (ctx,next) => {
+        try{
+            let json = await recipedetailsDAO.adminRecipeList();
+            ctx.body = {"code":200, "message": "后台菜谱列表",data: json}
+        }catch (e) {
+            ctx.body = {"code":500, "message": "获取后台菜谱列表失败",data: []}
+        }
+    }
 };

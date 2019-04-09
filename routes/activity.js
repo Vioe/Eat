@@ -19,5 +19,9 @@ router.get('/getAdminActivity',async (ctx,next) => {
 router.get('/delAdminActivity/:activityId',async (ctx,next) => {
     await activityController.delAdminActivity(ctx,next);
 })
+//添加用户报名活动
+router.get('/addActivityResult/:userId/:activityId',async (ctx,next) => {
+    await activityController.addActivityResult(ctx,next)
+})
 
 module.exports = router
